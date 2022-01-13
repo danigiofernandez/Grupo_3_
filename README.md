@@ -21,3 +21,6 @@ https://www.prontomaquina.com.ar/
 https://romeco.com.ar/
 https://www.alkiherramienta.com/
 https://alquilotodo.com.ar/
+
+Plataforma Utilizada para Tablero de Trabajo:
+https://trello.com/b/sSHGbIUO/grupo-3-proyecto
