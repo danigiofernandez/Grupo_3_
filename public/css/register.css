@@ -4,6 +4,7 @@
     margin: 0;
 }
 
+
 header{
     background-color: white;
 }
@@ -22,10 +23,3 @@ body{
     text-align: center;
 }
 
-h1{
-    text-align: left;
-}
-
-h2{
-    text-align: center;
-}
