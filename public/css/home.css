@@ -4,30 +4,39 @@
     padding: 0;
     box-sizing: border-box;
     }
-    header{
-        width: 100%;
+
+
+header {
+    position: fixed;
+    position: -webkit-fixed;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 16px;
+    width: 100%;
     }
 
-    .contenedor{
-       
-    }
+body{
+    background-color: gray;
+} 
+
 
 .contenedor .nav-grid{
 
     display: grid;
 
 }
-
+.logo{
+    text-align: left;
+}
 .contenedor .nav-grid .logo img{
     
-    width: 24px;
+    width: 40px;
 }
 
 .contenedor .nav-grid .burger-menu{
 
     text-align: right;
   
-
 }
 
 .contenedor .nav-grid .burger-menu .fa-bars{
