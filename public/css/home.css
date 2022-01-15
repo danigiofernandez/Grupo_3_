@@ -1,0 +1,38 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    header{
+        width: 100%;
+    }
+
+    .contenedor{
+       
+    }
+
+.contenedor .nav-grid{
+
+    display: grid;
+
+}
+
+.contenedor .nav-grid .logo img{
+    
+    width: 24px;
+}
+
+.contenedor .nav-grid .burger-menu{
+
+    text-align: right;
+  
+
+}
+
+.contenedor .nav-grid .burger-menu .fa-bars{
+    text-align: right;
+}
+
+
+
