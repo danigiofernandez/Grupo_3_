@@ -6,36 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="/css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Lato:wght@300&display=swap" rel="stylesheet">
 </head>
-<header>
-    <div class="logo">
-        <img src="/images/logo-central.png" alt="Logo Hermaq">
-    </div>
-</header>
+
 
 <body>
     <div class= "contenedor">
-        
+        <header>
+            <div class="logo">
+                <img width="50%" src="/images/logotipo-central.png" alt="Logo Hermaq">
+            </div>
+        </header>
         <h1>
-                Cuenta
+            Crear cuenta
         </h1>
-        
         <h2>
             Datos:
-            <ul>
-                <li>Nombre</li>
-                <li>Apellido</li>
-                <li>Dirección</li>
-                <li>Email</li>
-            </ul>
         </h2>
+        <div class= "caja-datos">
+            <div class= contenedor-datos>
+                <label>Nombre</label><input type="text">
+                <br>
+                <label>Apellido</label><input type="text">
+                <br>
+                <label>Dirección</label><input type="text">
+                <br>
+                <label>Email</label><input type="email">
+            </div>
+        </div>
         <h2>
             Contraseña:
-            <ul>
-                <li>Contraseña</li>
-                <li>Confirmar Contraseña</li>
-            </ul>
         </h2>
+        <div class="caja-contraseña">
+            <div class="contenedor-contraseña">
+                <label>Contraseña</label><input type="password">
+                <br>
+                <label>Confirmar contraseña</label><input type="password">
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>

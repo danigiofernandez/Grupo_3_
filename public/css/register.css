@@ -7,10 +7,9 @@
 
 header{
     background-color: white;
-}
-
-ul{
-    text-align: left;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 body{
@@ -25,10 +24,36 @@ body{
 }
 
 .logo{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-ul{
+
+.contenedor-datos{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     font-size: 16px;
+    margin: 15pc solid black;
+}
+
+.contenedor-contraseña{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+    margin: 15pc solid black;
+}
+
+.caja-datos{
+    display: flex;
+    margin: 15px solid black;
+    justify-content: center;
+}
+.caja-contraseña{
+    display: flex;
+    margin: 15px solid black;
+    justify-content: center;
 }
