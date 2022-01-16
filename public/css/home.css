@@ -7,16 +7,41 @@
 
 
 header {
-    position: fixed;
-    position: -webkit-fixed;
-    z-index: 1000;
+
     background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
     width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    }
+
+    header .form .input{
+        background-color: #FFF;
+        border: 1px solid #000;
+        outline: none;
+        color: #666;
+        padding: 2px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    
+    header .form .submit{
+        background-color: #FFF;
+        border: 1px solid #000;
+        color: #666;
+        width: 10%;
+    }
+    .estiloh3{
+        font-size: 11px;
+        
+        text-align: center;
     }
 
 body{
     background-color: gray;
+   
+
+    
 } 
 
 
@@ -27,20 +52,34 @@ body{
 }
 .logo{
     text-align: left;
+    margin-bottom: 5%;
 }
+
 .contenedor .nav-grid .logo img{
     
-    width: 40px;
+    width: 250px;
+    
 }
 
 .contenedor .nav-grid .burger-menu{
 
     text-align: right;
-  
+    margin-top: -20%;  
+ 
 }
 
 .contenedor .nav-grid .burger-menu .fa-bars{
     text-align: right;
+    color:rgb(199, 197, 197);
+    font-size: 25px;  
+
+}
+
+.barra{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
 }
 
 
