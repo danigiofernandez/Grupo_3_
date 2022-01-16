@@ -6,7 +6,7 @@
 
 
 header{
-    background-color: white;
+    background-color:rgba(255, 255, 255, 0.9);
     display: flex;
     text-align: center;
     justify-content: center;
@@ -28,6 +28,8 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
+    padding: 15px;
+
 }
 
 
@@ -36,7 +38,7 @@ body{
     flex-direction: column;
     text-align: center;
     font-size: 16px;
-    margin: 15pc solid black;
+    padding: 15px;
 }
 
 .contenedor-contraseña{
@@ -44,16 +46,34 @@ body{
     flex-direction: column;
     text-align: center;
     font-size: 16px;
-    margin: 15pc solid black;
+    padding: 15px;
 }
 
 .caja-datos{
     display: flex;
-    margin: 15px solid black;
-    justify-content: center;
+    justify-content: left;
+    border: 3px solid black;
 }
 .caja-contraseña{
     display: flex;
-    margin: 15px solid black;
-    justify-content: center;
-}
+    justify-content: left;
+    border: 3px solid black;
+ }
+
+ label{
+     font-size: 16px;
+     font-weight: bold;
+ }
+ button{
+     box-sizing: border-box;
+     display: flex;
+     background-color: white;
+     font-size: 18;
+     border: 1px solid black;
+ }
+ footer{
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+ }
