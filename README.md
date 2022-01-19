@@ -13,7 +13,7 @@ Tengo 31 años, soy de la zona oeste de Buenos Aires, trabajo en una empresa ter
 Tengo 27 años. Actualmente estoy viviendo en CABA. Trabajo para SODIMAC, como analista de operaciones comerciales. Por otro lado, estoy estudiando para ser Traductor Publico de Ingles en la UBA (facultad de derecho). Mi objetivo es poder adentrarme en el mundo de la programación y poder dedicarme a esto ya que me parece fascinante.    
 
 -Baigorria Clara:
-Resido en la provincia de San Luis (capital). Actualemente trabajo en una empresa de software, como soporte para los sitios que trabaja la empresa (base de datos). Mi obejetivo es adquirir conocimientos para poder unuirme y pertenecer a más proyectos e ir interactuando en más equipos. 
+Resido en la provincia de San Luis (capital).  Mi obejetivo es adquirir conocimientos para poder unuirme y pertenecer a más proyectos e ir interactuando en más equipos. 
 
 Sitios en los cuales nos inspiramos:
 https://rentatool.com.ar/
