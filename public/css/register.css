@@ -76,12 +76,14 @@ body{
  }
  h1{
      text-align: center;
+
  }
  .form{
     display: flex; 
     text-align: center;
     flex-direction: column;
     align-items: center;
+    background-color: #e29f0f;
  }
  .buttons{
      flex-direction: row;
