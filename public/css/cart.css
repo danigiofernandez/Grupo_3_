@@ -1,0 +1,261 @@
+
+/*         MOBILE         */
+*{
+    box-sizing: border-box;
+    box-sizing: content-box
+}
+header{
+    background-color:#ecede7
+}
+
+footer{
+    background-color: #ecede7;
+}
+
+.mainTitulo{
+    padding:2%;
+    background-color:#e29f0f;
+    font-size:60%;
+    color:white
+    
+    
+}
+
+.tacho{
+    display: flex;
+}
+
+#totalCartHeader{
+    padding:5%;
+    display:flex;
+    flex-wrap:wrap;
+    margin:auto;
+    justify-content:space-between;
+    background-color:#f5f5f5;
+    font-size:40%;
+    border:solid;
+    border-width:thin;
+    border-color:#dddede;
+}
+.accionCartHeader{
+    width:80px;
+    padding:2%
+}
+
+.accionCartHeader input{
+    background-color:white;
+    border:solid;
+    border-width:1px;
+    border-color:gray;
+    padding:2%;
+}
+
+.TotalCaja{
+    font-size:9px;
+}
+
+#ValorTotal{
+    color:red;
+    padding:1%;
+}
+
+#botonPago{
+    padding:1%;
+    margin:2%;
+    width:40%;
+    color:white;
+    background-color: #e29f0f;
+    border:none;
+}
+
+#leyendaTotal{
+    color:#858585;
+}
+
+
+#topname{
+    color:#045785;
+    font-size:70%;
+    width:50%;
+    padding:3%
+}
+
+#headerTable{
+    display:flex;
+    justify-content:space-between;
+    font-size:80%;
+    margin-right:6px;
+    margin-left:6px;
+}
+
+#listaPlanes{
+    width:100%;
+    margin-left:0%;
+    margin-right:0%
+}
+
+
+#articuloItem{
+    display:flex;
+    justify-content:space-between;
+    border:solid;
+    border-color:#dddede;
+    border-right:none;
+    border-left:none;
+    padding:7% 0%;
+    font-size:85%;
+}
+
+#articuloItem2{
+    display:flex;
+    justify-content:space-between;
+    border:solid;
+    border-color:#dddede;
+    border-right:none;
+    border-left:none;
+    border-top:none;
+    padding:7% 0%;
+    font-size:85%
+}
+
+#planservice{
+    text-decoration:underline
+}
+
+#deletebutton{
+    background-color:#e29f0f;
+    color:white;
+    font-size:70%;
+    margin-left:6px;
+    margin-right:6px;
+    padding:1px;
+    border:solid;
+    border-color:#045785
+}
+
+.precioTotal{
+    margin-right:6px;
+}
+
+
+/*      TABLETS        */
+
+@media (min-width:768px){
+
+    #totalCartHeader{
+        font-size:60%;
+    }
+    
+    .TotalCaja{
+        font-size:14px;
+    }
+    
+    #headerTable{
+        font-size:100%;
+    }
+    
+    #listaPlanes{
+    width:80%;
+    margin-left:10%;
+    margin-right:0%
+}
+
+    #articuloItem{
+        font-size:100%
+    }
+    
+    #articuloItem2{
+        font-size:100%
+    }
+    
+    }
+
+/*      LAPTOPS        */
+
+@media (min-width:1000px){
+    .mainTitulo{
+        font-size:100%
+    }
+
+    #totalCartHeader{
+        font-size:110%;
+    }
+    
+    .TotalCaja{
+        font-size:22px;
+    }
+
+    #topname{
+        font-size:120%
+    }
+    
+    #headerTable{
+        font-size:140%;
+        padding:1% 3%
+    }
+    
+    #listaPlanes{
+    width:80%;
+    margin-left:10%;
+    margin-right:0%
+}
+    
+    #articuloItem{
+        font-size:160%;
+        margin-right:2%;
+        margin-left:2%
+    }
+    
+    #articuloItem2{
+        font-size:160%;
+        margin-right:2%;
+        margin-left:2%
+    }
+    
+    }
+
+
+
+/*      LAPTOPS        */
+
+@media (min-width:1300px){
+    .mainTitulo{
+        font-size:120%
+    }
+
+    #totalCartHeader{
+        font-size:130%;
+    }
+    
+    .TotalCaja{
+        font-size:23px;
+    }
+
+    #topname{
+        font-size:150%
+    }
+    
+    #headerTable{
+        font-size:170%;
+        padding:1% 3%
+    }
+    
+     #listaPlanes{
+    width:80%;
+    margin-left:10%;
+    margin-right:0%
+}
+    
+    #articuloItem{
+        font-size:200%;
+        margin-right:2%;
+        margin-left:2%
+    }
+    
+    #articuloItem2{
+        font-size:200%;
+        margin-right:2%;
+        margin-left:2%
+    }
+    
+    }
