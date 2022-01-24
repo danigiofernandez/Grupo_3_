@@ -22,42 +22,38 @@
         <h1>
             Crear cuenta
         </h1>
-        
-        <div class= "caja-datos">
-            <h2>
-                Datos:
-            </h2>
-        </div>
-        <br>
-        <div class= contenedor-datos>
-                <label>Nombre</label><input type="text">
-                <br>
-                <label>Apellido</label><input type="text">
-                <br>
-                <label>Dirección</label><input type="text">
-                <br>
-                <label>Email</label><input type="email">
-        </div>
-        <div class="caja-contraseña">
-            <h2>
-                Contraseña:
-            </h2>
-        </div>
+        <form class="form" method="post">
+            <div class= "caja-datos">
+                <h2>
+                    Datos:
+                </h2>
+            </div>
             <br>
-        <div class="contenedor-contraseña">
-                <label>Contraseña</label><input type="password">
+            <div class= contenedor-datos>
+                    <label>Nombre</label><input type="text" name= "nombreDeUsuario" required>
+                    <br>
+                    <label>Apellido</label><input type="text" name= "apellido" required>
+                    <br>
+                    <label>Dirección</label><input type="text" name= "direccion" required>
+                    <br>
+                    <label>Email</label><input type="email" name= "email" required>
+            </div>
+            <div class="caja-contraseña">
+                <h2>
+                    Contraseña:
+                </h2>
+            </div>
                 <br>
-                <label>Confirmar contraseña</label><input type="password">
-        </div>
-        <footer>
-            <div class="button">
-                <button type="reset">Reset</button>
+            <div class="contenedor-contraseña">
+                    <label>Contraseña</label><input type="password" name="password">
+                    <br>
+                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword">
             </div>
-            <br>  
-            <div class="button">
-                <button type="submit">Enviar</button>
-            </div>
-        </footer>
+            
+            <div class="button1"><button type="reset">Reset</button></div>
+            <div class="button2"><button type="submit">Enviar</button></div>
+            
+        </form>
         
     </div>
 </body>
