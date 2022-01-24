@@ -4,12 +4,17 @@
     margin: 0;
 }
 
+.contenedor{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
 
 header{
     background-color:rgba(255, 255, 255, 0.9);
     display: flex;
     text-align: center;
-    justify-content: center;
+    flex-direction: row;
 }
 
 body{
@@ -18,7 +23,6 @@ body{
 }
 
 .logo{
-    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
@@ -57,7 +61,7 @@ body{
      font-weight: bold;
  }
  .button1, .button2{
-    text-align: center; 
+    flex-direction: row;
     font-size: 18;
     border: 1px solid black;
     width: 50px;
@@ -75,4 +79,10 @@ body{
     display: flex; 
     text-align: center;
     flex-direction: column;
+    align-items: center;
+ }
+ .buttons{
+     flex-direction: row;
+     display: flex;
+     justify-content: space-around;
  }
