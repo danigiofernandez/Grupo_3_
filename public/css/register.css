@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    justify-content: center;
 }
 
 .contenedor{
@@ -63,8 +64,9 @@ body{
  .button1, .button2{
     flex-direction: row;
     font-size: 18;
-    border: 1px solid black;
     width: 50px;
+    justify-content: space-around;
+    border-radius: 15px;
  }
  footer{
      box-sizing: border-box;
@@ -85,4 +87,9 @@ body{
      flex-direction: row;
      display: flex;
      justify-content: space-around;
+     box-shadow: rgb(73, 71, 71);
+ }
+
+ input{
+     border-radius: 15px;
  }
