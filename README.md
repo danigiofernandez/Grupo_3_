@@ -15,6 +15,9 @@ Tengo 27 años. Actualmente estoy viviendo en CABA. Trabajo para SODIMAC, como a
 -Baigorria Clara:
 Resido en la provincia de San Luis (capital).  Mi obejetivo es adquirir conocimientos para poder unuirme y pertenecer a más proyectos e ir interactuando en más equipos. 
 
+-Guillermo Palma:
+Resido en la provincia de Mendoza. Tengo 58 años. Esto es un desafío importante, ya que hace mucho que no estudiaba o realizaba un curso de algo importante. Ya que este curso voy a adquirir otro conocimiento que me ayudará a mantener mi cabeza activa y poder desarrollar y practicar estas nuevas herramientas.
+
 Sitios en los cuales nos inspiramos:
 https://rentatool.com.ar/
 https://www.prontomaquina.com.ar/
