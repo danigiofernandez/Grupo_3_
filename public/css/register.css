@@ -95,3 +95,19 @@ body{
  input{
      border-radius: 15px;
  }
+ 
+
+ .form .h2cajas{
+    display: flex;
+    text-align: left;
+    background-color: gray;
+    justify-content: flex-start;
+    position:left
+ }
+ .formContra{
+    display: flex; 
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e29f0f;
+ }

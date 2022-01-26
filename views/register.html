@@ -22,13 +22,13 @@
         <h1>
             Crear cuenta
         </h1>
+        <div class= "caja-datos">
+            <h2>
+                Datos:
+            </h2>
+        </div>
+        <br>
         <form class="form" method="post">
-            <div class= "caja-datos">
-                <h2>
-                    Datos:
-                </h2>
-            </div>
-            <br>
             <div class= "contenedor-datos">
                     <label>Nombre</label><input type="text" name= "nombreDeUsuario" required>
                     <br>
@@ -38,16 +38,20 @@
                     <br>
                     <label>Email</label><input type="email" name= "email" required>
             </div>
-            <div class="caja-contraseña">
-                <h2>
-                    Contraseña:
-                </h2>
-            </div>
-                <br>
+           
+        </form>
+        
+        <div class="caja-contraseña">
+            <h2>
+                Contraseña:
+            </h2>
+        </div>
+        <br>
+        <form class="formContra" method="post">
             <div class="contenedor-contraseña">
-                    <label>Ingrese Contraseña</label><input type="password" name="password">
+                    <label>Ingrese Contraseña</label><input type="password" name="password" required>
                     <br>
-                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword">
+                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword" required>
             </div>
             
             <div class="buttons">
@@ -61,7 +65,9 @@
             </div>
             
         </form>
-        
+        <footer>
+            
+        </footer>
     </div>
 </body>
 </html>
