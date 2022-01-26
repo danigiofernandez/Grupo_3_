@@ -20,3 +20,7 @@ app.get('/register',(req, res)=>{
 app.get('/cart',(req, res)=>{
     res.sendFile(path.resolve(__dirname,'./views/cart.html'))
 });
+
+app.get('/detalle',(req, res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/detalle.html'))
+});
