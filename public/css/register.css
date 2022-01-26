@@ -51,23 +51,19 @@ body{
 .caja-datos{
     display: flex;
     justify-content: left;
+    color: white;
 }
 .caja-contraseña{
     display: flex;
     justify-content: left;
+    color: white;
  }
 
  label{
      font-size: 16px;
      font-weight: bold;
  }
- .button1, .button2{
-    flex-direction: row;
-    font-size: 18;
-    width: 50px;
-    justify-content: space-around;
-    border-radius: 15px;
- }
+
  footer{
      box-sizing: border-box;
      display: flex;
@@ -75,8 +71,8 @@ body{
      justify-content: space-around;
  }
  h1{
-     text-align: center;
-
+    text-align: center;
+    color: white;
  }
  .form{
     display: flex; 
@@ -86,17 +82,15 @@ body{
     background-color: #e29f0f;
  }
  .buttons{
-     flex-direction: row;
-     display: flex;
-     justify-content: space-around;
-     box-shadow: rgb(73, 71, 71);
+    flex-direction: row;
+    display: flex;
+    align-items: center;
  }
-
+ 
  input{
      border-radius: 15px;
  }
  
-
  .form .h2cajas{
     display: flex;
     text-align: left;
