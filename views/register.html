@@ -22,13 +22,13 @@
         <h1>
             Crear cuenta
         </h1>
+        <div class= "caja-datos">
+            <h2>
+                Datos:
+            </h2>
+        </div>
+        <br>
         <form class="form" method="post">
-            <div class= "caja-datos">
-                <h2>
-                    Datos:
-                </h2>
-            </div>
-            <br>
             <div class= "contenedor-datos">
                     <label>Nombre</label><input type="text" heigth="20" name= "nombreDeUsuario" required>
                     <br>
@@ -38,30 +38,33 @@
                     <br>
                     <label>Email</label><input type="email" name= "email" required>
             </div>
-            <div class="caja-contraseña">
-                <h2>
-                    Contraseña:
-                </h2>
-            </div>
-                <br>
-            <div class="contenedor-contraseña">
-                    <label>Ingrese Contraseña</label><input type="password" name="password">
-                    <br>
-                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword">
-            </div>
-            
-            <div class="buttons">
-                <div class="button1">
-                    <button type="reset">Borrar</button>
-                </div>
-                <div class="button2">
-                    <button type="submit">Enviar</button>
-                </div>
-
-            </div>
-            
+           
         </form>
         
+        <div class="caja-contraseña">
+            <h2>
+                Contraseña:
+            </h2>
+        </div>
+        <br>
+        <form class="formContra" method="post">
+            <div class="contenedor-contraseña">
+                    <label>Ingrese Contraseña</label><input type="password" name="password" required>
+                    <br>
+                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword" required>
+            </div>
+            
+            
+        </form>
+        <div class="buttons">
+            <div class="button1">
+            <button type="reset">Borrar</button>
+            <button type="submit">Enviar</button>
+        </div>
+
+        <footer>
+
+        </footer>
     </div>
 </body>
 </html>
