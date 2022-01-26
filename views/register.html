@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Lato:wght@300&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class= "contenedor">
+        <header>
+            <div class="logo">
+                <img width="50%" src="/images/logotipo-central.png" alt="Logo Hermaq">
+            </div>
+        </header>
+        <h1>
+            Crear cuenta
+        </h1>
+        <form class="form" method="post">
+            <div class= "caja-datos">
+                <h2>
+                    Datos:
+                </h2>
+            </div>
+            <br>
+            <div class= "contenedor-datos">
+                    <label>Nombre</label><input type="text" name= "nombreDeUsuario" required>
+                    <br>
+                    <label>Apellido</label><input type="text" name= "apellido" required>
+                    <br>
+                    <label>Dirección</label><input type="text" name= "direccion" required>
+                    <br>
+                    <label>Email</label><input type="email" name= "email" required>
+            </div>
+            <div class="caja-contraseña">
+                <h2>
+                    Contraseña:
+                </h2>
+            </div>
+                <br>
+            <div class="contenedor-contraseña">
+                    <label>Ingrese Contraseña</label><input type="password" name="password">
+                    <br>
+                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword">
+            </div>
+            
+            <div class="buttons">
+                <div class="button1">
+                    <button type="reset">Reset</button>
+                </div>
+                <div class="button2">
+                    <button type="submit">Enviar</button>
+                </div>
+
+            </div>
+            
+        </form>
+        
+    </div>
+</body>
+</html>
