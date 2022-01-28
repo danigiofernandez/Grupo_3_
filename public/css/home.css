@@ -247,14 +247,15 @@
                 
     .form .input{
         /*background-color: #FFF; */
-        /* border: 1px solid rgb(99, 99, 99); */
+        border: 1px solid rgb(153, 152, 152); 
         outline: none;
         color: #666;
         padding: 2px;
         /* margin-top: 10px; */
-        /* border-radius: 30px; */
+        border-radius: 6px; 
         box-shadow: 0px 0px 10px rgb(155 155 155 / 45%);
-        margin-left: 9px;       
+        margin-left: 9px;  
+        width: 90%;     
     }
     
     .form .submit{
@@ -274,7 +275,7 @@
     .carrito{
         margin-top: 77px;
         font-size: 18px;
-        margin-left: 13px;
+        margin-left: 7px;
         color: #e29f0f;
     }
 
@@ -354,9 +355,11 @@
 
         .contenedor #ul-menu{
             visibility: visible;
-            display: flex;
-            /*padding-right: 20px;*/
-            margin-left: 3px;
+        display: flex;
+        /* padding-right: 20px; */
+        margin-left: 200px;
+        /* text-align: -webkit-match-parent; */
+        margin-top: 10px;
         }
 
         .contenedor li a{
@@ -452,6 +455,7 @@
 
         .menu-cont{
             font-size: 20px;
+            margin-right: -10px;
         }
 
         a{
