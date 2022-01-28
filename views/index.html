@@ -26,14 +26,14 @@
 <body>
     <div class="encabezado">
         <div class="icon">
-            <i class="fas fa-user"></i>
+            <a class="icon" href="\login"><i class="fas fa-user"></i></a>
         </div>
     </div>
     <div class="contenedor">
         <header>
             <div class="nav-cont">
                 <div class="logo">
-                    <img src="/images/logotipo-horizontal.png" alt="Logo de Hermaq">
+                    <a class="logo" href="\"><img src="/images/logotipo-horizontal.png" alt="Logo de Hermaq"></a>
                 </div>
                 <div class="menu-cont">
                     <input type="checkbox" id="check" />
@@ -54,12 +54,13 @@
         <div class="bus-car">
             <div class="search">
                 <div class="form" action="#" method="GET">
-                    <div class="input"><span>¿Qué estás buscando?</span></div>
+                    <input class="input" type="text" placeholder="¿Qué estas buscando?">
+                    <i class="fas fa-search"></i>
                 </div>
             </div>
             <div class="carrito">
                 <div>
-                    <i class="fas fa-shopping-cart"></i>
+                    <a class ="carrito" href="/cart"><i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
         </div>
@@ -76,7 +77,7 @@
             <section>
                 <div class="products">
                     <div>
-                        <article>
+                        <article><a href="\detalle">
                             <img src="https://www.todomaquinas.com.ar/contenido/productos/original/1634826697-4620.jpeg"
                                 alt="producto1" href="detalle.html">
                             <div class="main-article">
@@ -85,7 +86,7 @@
                                 <p class="descuento">35% off</p>
                                 
                             </div>
-                        </article>
+                        </a></article>
                     </div>
                     <div>
                         <article>
