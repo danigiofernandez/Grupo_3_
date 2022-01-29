@@ -95,7 +95,8 @@ body{
     flex-direction: row;
     display: flex;
     align-items: center;
-    background-color: rgba(228, 227, 227, 0.733);
+    width: 80px;
+    border-radius: 15px;
  }
  
  input{
@@ -122,4 +123,8 @@ body{
             font-size: 40px;
             border-radius: 15px;
         }
+        body{
+        padding: 20px;
+        }
+        
  }
