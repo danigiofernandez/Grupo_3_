@@ -7,8 +7,9 @@
     <title>Registro</title>
     <link rel="stylesheet" href="/css/register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 
 
@@ -19,15 +20,14 @@
                 <a href="\"> <img width="50%" src="/images/logotipo-central.png" alt="Logo Hermaq"></a>
             </div>
         </header>
-        <h1>
-            Crear cuenta
-        </h1>
-        <div class= "caja-datos">
-            <h2>
-                Datos:
-            </h2>
-        </div>
-        <br>
+            <h1>
+                Crear cuenta
+            </h1>
+            <div class= "caja-datos">
+                <h2>
+                    Datos:
+                </h2>
+            </div>
         <form class="form" method="post">
             <div class= "contenedor-datos">
                     <label>Nombre</label><input type="text" heigth="20" name= "nombreDeUsuario" required>
@@ -38,32 +38,40 @@
                     <br>
                     <label>Email</label><input type="email" name= "email" required>
             </div>
-           
-        
-        
-        <div class="caja-contraseña">
-            <h2>
-                Contraseña:
-            </h2>
-        </div>
-        <br>
-         <div class="contenedor-contraseña">
+            <div class="caja-contraseña">
+                <h2>
+                    Contraseña:
+                </h2>
+            </div>
+            <br>
+            <div class="contenedor-contraseña">
                     <label>Ingrese Contraseña</label><input type="password" name="password" required>
                     <br>
                     <label>Confirmar contraseña</label><input type="password" name="confirmPassword" required>
             </div>
             
             <div class="buttons">
-                <div class="button1">
                 <button type="reset">Borrar</button>
+                <br>
                 <button type="submit">Enviar</button>
             </div>
             
         </form>
-        
         <footer>
-
+            <div class="social">
+                <!-- <img src="/images/logo-solo.png" width="24px" alt="Logo de Hermaq">-->
+                <a title="Instagram" href="https://www.instagram.com" target="blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a title="Whatsapp" href="https://www.whatssap.com" target="blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a title="Telegram" href="https://www.telegram.com" target="blank">
+                    <i class="far fa-paper-plane"></i>
+                </a>
+            </div>
         </footer>
     </div>
 </body>
+
 </html>
