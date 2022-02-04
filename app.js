@@ -5,6 +5,8 @@ const app=express();
 const publiPath=path.resolve(__dirname,'./public');
 app.use(express.static(publiPath));
 
+app.set("view engine","ejs")
+
 app.listen(3000,()=>{
     console.log('Servidor Corriendo');
 });
