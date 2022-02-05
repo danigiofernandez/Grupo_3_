@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const mainControllers = require('../controllers/mainControllers');
 
-router.get('/register',(req, res)=>{
-    res.sendFile(path.resolve(__dirname,'./views/register.html'))
-});
+router.get('/register', mainControllers.register);
 
 module.exports = router;
