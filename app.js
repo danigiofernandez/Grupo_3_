@@ -18,10 +18,10 @@ app.listen(3000,()=>{
 
 app.use('/', indexRoutes);
 
-app.use('/register', registerRoutes);
+app.use('/', registerRoutes);
 
-app.use('/cart', cartRoutes );
+app.use('/', cartRoutes );
 
-app.use('/detalle', detalleRoutes)
+app.use('/', detalleRoutes);
 
-app.use('/login', loginRoutes)
+app.use('/', loginRoutes);
