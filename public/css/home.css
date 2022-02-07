@@ -155,11 +155,13 @@
         p{
             margin: 10px;
             font-size: 12px;
+            color: black;
         }
         
         .precio{
             font-size: 25px;
             margin-top: 1px;
+            color: black;
         }
                
         .descuento{

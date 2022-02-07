@@ -1,68 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hermaq</title>
-    <link href="/css/home.css" rel="stylesheet" type="text/css">
-    <link href="/css/detalle.css"rel="stylesheet" type="text/cass"
+<%- include('./partials/head')%>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Outfit:wght@100;400&display=swap"
-        rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-</head>
-
-<body>
-    <div class="encabezado">
-        <div class="icon">
-            <a class="icon" href="\login"><i class="fas fa-user"></i></a>
+    <body>
+        <div class="encabezado">
+            <div class="icon">
+                <a class="icon" href="\login"><i class="fas fa-user"></i></a>
+            </div>
         </div>
-    </div>
-    <div class="contenedor">
-        <header>
-            <div class="nav-cont">
-                <div class="logo">
-                    <a class="logo" href="\"><img src="/images/logotipo-horizontal.png" alt="Logo de Hermaq"></a>
-                </div>
-                <div class="menu-cont">
-                    <input type="checkbox" id="check" />
-                    <i class="fas fa-bars"></i>
-                    <i class="fas fa-times"></i>
-                    <nav class="menu">
-                        <ul id="ul-menu">
-                            <li><a href="#seccion1">Categorías</a></li>
-                            <li><a href="#seccion2">Ofertas</a></li>
-                            <li><a href="#seccion3">Contacto</a></li>
-                            <li><a href="#seccion4">Ayuda</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-            </div>
-        </header>
-        <div class="bus-car">
-            <div class="search">
-                <div class="form" action="#" method="GET">
-                    <input class="input" type="text" placeholder="¿Qué estas buscando?">
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
-            <div class="carrito">
-                <div>
-                    <a class ="carrito" href="/cart"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
+        <div class="contenedor">
+            <%- include('./partials/header')%>
         </div>
         <section class="banner">
             <img src="/images/tool22.jpg" alt="Banner">
@@ -78,15 +26,15 @@
                 <div class="products">
                     <div>
                         <article><a href="\detalle">
-                            <img src="https://www.todomaquinas.com.ar/contenido/productos/original/1634826697-4620.jpeg"
-                                alt="producto1" href="detalle.html">
-                            <div class="main-article">
-                                <p class="detalle">Motosierra A Nafta</p>
-                                <p class="precio">$18.400</p>
-                                <p class="descuento">35% off</p>
-                                
-                            </div>
-                        </a></article>
+                                <img src="https://www.todomaquinas.com.ar/contenido/productos/original/1634826697-4620.jpeg"
+                                    alt="producto1" href="detalle.html">
+                                <div class="main-article">
+                                    <p class="detalle">Motosierra A Nafta</p>
+                                    <p class="precio">$18.400</p>
+                                    <p class="descuento">35% off</p>
+
+                                </div>
+                            </a></article>
                     </div>
                     <div>
                         <article>
@@ -96,7 +44,7 @@
                                 <p class="detalle">Juego De Herramientas</p>
                                 <p class="precio">$6.097</p>
                                 <p class="descuento">40% off</p>
-                                
+
                             </div>
                         </article>
                     </div>
@@ -108,11 +56,11 @@
                                 <p class="detalle">Compresor De Aire Electrico</p>
                                 <p class="precio">$41.819</p>
                                 <p class="descuento">20% off</p>
-                                
+
                             </div>
                         </article>
-                        </div>
-                        <div>
+                    </div>
+                    <div>
                         <article>
                             <img src="https://www.todomaquinas.com.ar/contenido/productos/original/1544639854.png"
                                 alt="producto4">
@@ -120,11 +68,11 @@
                                 <p class="detalle">Rotomartillo Sds Max 10</p>
                                 <p class="precio">$30.791</p>
                                 <p class="descuento">10% off</p>
-                                
+
                             </div>
                         </article>
-                        </div>
-                        <div>
+                    </div>
+                    <div>
                         <article>
                             <img src="https://www.todomaquinas.com.ar/contenido/productos/original/1630595581-1130.png"
                                 alt="producto5">
@@ -132,11 +80,11 @@
                                 <p class="detalle">Hidrolavadora Alta Presión</p>
                                 <p class="precio">$12.608</p>
                                 <p class="descuento">Envío sin cargo</p>
-                                
+
                             </div>
                         </article>
-                        </div>
-                        <div>
+                    </div>
+                    <div>
                         <article>
                             <img src="https://www.todomaquinas.com.ar/contenido/productos/original/1604080621-4660.jpeg"
                                 alt="producto6">
@@ -144,36 +92,16 @@
                                 <p class="detalle">Gabinete Carro</p>
                                 <p class="precio">$78.906</p>
                                 <p class="descuento">10% off</p>
-                                
+
                             </div>
                         </article>
                     </div>
                 </div>
             </section>
         </main>
-        <footer>
-            <div class="datos-f">
-                <p>Contáctanos</p>
-                <p>Nuestras redes sociales</p>
+        <%- include('./partials/footer')%>
             </div>
-            <div class="pie">
-                <div class="social">
-                    <!-- <img src="/images/logo-solo.png" width="24px" alt="Logo de Hermaq">-->
-                    <a title="Instagram" href="https://www.instagram.com" target="blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a title="Whatsapp" href="https://www.whatssap.com" target="blank">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a title="Telegram" href="https://www.telegram.com" target="blank">
-                        <i class="far fa-paper-plane"></i>
-                    </a>
-                </div>
-            </div>
-        </footer>
-    </div>
 
-
-</body>
+    </body>
 
 </html>
