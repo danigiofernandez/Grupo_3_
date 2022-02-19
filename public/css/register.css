@@ -24,7 +24,7 @@ header{
 
 body{
     font-family: 'Lato', sans-serif;
-    background-color: gray;
+    background-color: white;
     display: flex;
     box-sizing: border-box;
     justify-content: center;
@@ -61,13 +61,13 @@ body{
 .caja-datos{
     display: flex;
     justify-content: left;
-    color: white;
+    color: black;
 }
 .caja-contraseña{
     display: flex;
     justify-content: left;
-    color: white;
-    background-color: gray;
+    color: black;
+    background-color: white;
     width: 100%;
  }
 
@@ -85,7 +85,8 @@ body{
  }
  h1{
     text-align: center;
-    color: white;
+    color: black;
+    background-color: rgba(228, 227, 227, 0.733);
  }
  .form{
     display: flex; 
@@ -130,6 +131,10 @@ body{
         }
         body{
         padding: 20px;
+        }
+        h1{
+            width: 100%;
+            border-radius: 15px;
         }
         
  }
