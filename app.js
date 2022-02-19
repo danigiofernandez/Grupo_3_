@@ -25,3 +25,8 @@ app.use('/', cartRoutes );
 app.use('/', detalleRoutes);
 
 app.use('/', loginRoutes);
+
+app.use((req,res,next)=>{
+      res.status(404).render("not-found");
+    }
+    );
