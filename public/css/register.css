@@ -19,6 +19,7 @@ header{
     text-align: center;
     flex-direction: row;
     position: relative;
+    top: -5px;
 }
 
 body{
@@ -125,6 +126,7 @@ body{
         footer{
             font-size: 40px;
             border-radius: 15px;
+            width: 100%;
         }
         body{
         padding: 20px;
