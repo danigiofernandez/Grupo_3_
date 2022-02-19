@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- recordar incluir head en las hojas -->
-    <%- include('./partials/head')%>
-    <title>Registro</title>
-    <link rel="stylesheet" href="/css/register.css">
-</head>
-
-
+    <head>
+        <!-- recordar incluir head en las hojas -->
+        <%- include('./partials/head')%>
+        <title>Registro</title>
+        <link rel="stylesheet" href="/css/register.css">
+    </head>
+    
 
 <body>
-    <!-- header unico para register-->
-    <header>
-        <div class="logo" href="/">
-            <a href="\"> <img width="50%" src="/images/logotipo-central.png" alt="Logo Hermaq"></a>
-        </div>
-    </header>
-
     <div class= "contenedor">
+        <header>
+            <div class="logo" href="/">
+                <a href="\"> <img width="50%" src="/images/logotipo-central.png" alt="Logo Hermaq"></a>
+            </div>
+        </header>
             <h1>
                 Crear cuenta
             </h1>
@@ -53,10 +50,11 @@
                 <button type="submit">Enviar</button>
             </div>
             
-        </form>     
-        <%- include('./partials/footer')%>
+        </form>
+        <footer>
+            <%- include('./partials/footer')%>
+        </footer>
     </div>
-    
 </body>
 
 </html>
