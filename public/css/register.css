@@ -102,11 +102,7 @@ body{
     width: 80px;
     border-radius: 15px;
  }
- 
- input{
-     border-radius: 15px;
- }
- 
+  
  .form .h2cajas{
     display: flex;
     text-align: left;

@@ -1,35 +1,32 @@
 h1{
- margin: 10px; 
- background-color:rgba(255, 255, 255, 0.9);
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- width:800px; 
- height: 260px;
-
+    margin: 10px; 
+    background-color:rgba(255, 255, 255, 0.9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:800px; 
+    height: 260px;
 }
 body {
-background: white;
-
+    background: white;
 }
 .encabezado {
-margin-left:120px;
-font-size: 55px;
-text-align:center;
-color: black;
-font-weight: bold;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-text-decoration: underline;
-background: #e29f0f;
-width: 380px;
-height: 170px;
-border: 5px solid rgb(199, 194, 194);
-border-radius: 5%;
-
+    margin-left:120px;
+    font-size: 55px;
+    text-align:center;
+    color: black;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    text-decoration: underline;
+    background: #e29f0f;
+    width: 380px;
+    height: 170px;
+    border: 5px solid rgb(199, 194, 194);
+    border-radius: 5%;
 }
 .subtitulo {
-margin-left: 57px;
-font-size: 18px;
-color: black; 
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin-left: 57px;
+    font-size: 18px;
+    color: black; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 .block {
     justify-content: center;
@@ -39,7 +36,6 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 550px;
     height: 170px;
 }
-
 button{
     font-size:25px;
     font-weight: bold;
@@ -66,9 +62,10 @@ button{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 .prueba {
-color: blue;
-text-decoration: underline;
-font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 14px;
 }
 .contenedor{
     display: flex;
@@ -79,6 +76,7 @@ font-weight: bold;
     background: #e29f0f;
     border-radius: 20px;
     text-align: center;
+    justify-content: center;
 }
 header{
     position:relative;
@@ -86,6 +84,8 @@ header{
     background-color: white;
     top: 0px;
 }
-
+label{
+    font-size: 15px;
+}
 
 
