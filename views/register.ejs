@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href="/css/register.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Lato:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-</head>
-
+    <head>
+        <!-- recordar incluir head en las hojas -->
+        <%- include('./partials/head')%>
+        <title>Registro</title>
+        <link rel="stylesheet" href="/css/register.css">
+    </head>
+    
 
 <body>
     <div class= "contenedor">
@@ -52,23 +47,12 @@
             <div class="buttons">
                 <button type="reset">Borrar</button>
                 <br>
-                <button type="submit">Enviar</button>
+                <button type="submit">Crear Usuario</button>
             </div>
             
         </form>
         <footer>
-            <div class="social">
-                <!-- <img src="/images/logo-solo.png" width="24px" alt="Logo de Hermaq">-->
-                <a title="Instagram" href="https://www.instagram.com" target="blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a title="Whatsapp" href="https://www.whatsapp.com" target="blank">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a title="Telegram" href="https://www.telegram.com" target="blank">
-                    <i class="far fa-paper-plane"></i>
-                </a>
-            </div>
+            <%- include('./partials/footer')%>
         </footer>
     </div>
 </body>

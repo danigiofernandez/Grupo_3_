@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/login.css" rel="stylesheet" type="text/css">
-    
-
+    <!-- recordar incluir head en las hojas -->
+    <%- include('./partials/head')%>
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
    
-    <header>
-        <h1 class="block">
-            <a href="\"><img width="50%" src="/images/logotipo-central.png" alt="Logo Hermaq"></a>
-        </h1>
-           <div class='encabezado'>
-            <p>Bienvenido</p> 
-            </div>
-             
     
-    </header>
-        
+        <header>
+            <div class="logo" href="/">
+                <a href="\"> <img width="50%" src="/images/logotipo-central.png" alt="Logo Hermaq"></a>
+            </div>
+        </header>
+            
             <div class='contenedor'>
                 <form action="resultado.html" method="POST">
                     <div>
                         <p> Ingresa para acceder a mejores ofertas </p>
                        </div>  
                 <p>
-                    <label> U s u a r i o: </label>
+                    <label> Usuario: </label>
+                    <br>
                     <input type= "text" size="25" name='mail' id='boton' >
                 </p>
-                    <p>
+                
+                <p>
                     <label> Contraseña:</label>
-                    <input type= "text" size="25" name='password' >
-                    </p>
+                    <br>
+                    <input type= "password" size="25" name='password' >
+                </p>
                     
-                        <p class="prueba"> Olvidó su contraseña?</p>
-                        <button class= 'button1' id='boton'>Recuperar</button>
-            </div>
-                        <button type='submit' id='boton'>INGRESAR </button>
+                <p class="prueba"> ¿Olvidó su contraseña?</p>
+
+                <p>¿No tiene usuario?</p>
+                <a class="prueba" href="./register">Crear Usuario</a>
+                <br>
+                <br>
+                <button class="button1" type='submit' id='boton'>INGRESAR </button>
             
+            </div>
                 </form>
+                <footer>
+                    <%- include('./partials/footer')%>
+                </footer>
 </body>
 
 </html>
