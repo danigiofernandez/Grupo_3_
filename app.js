@@ -22,6 +22,6 @@ app.use('/', registerRoutes);
 
 app.use('/', cartRoutes );
 
-app.use('/', detalleRoutes);
+app.use('/', detalleRoutes)
 
-app.use('/', loginRoutes);
+app.use('/', loginRoutes)
