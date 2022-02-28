@@ -6,10 +6,11 @@ const registerRoutes = require('./routes/register');
 const cartRoutes = require('./routes/cart');
 const detalleRoutes = require('./routes/detalle');
 const loginRoutes = require ('./routes/login');
-
 const publiPath=path.resolve(__dirname,'./public');
-app.use(express.static(publiPath));
 
+app.use(express.static(publiPath));
+app.use(express.urlencoded({ extended:false}));
+app.use(express.json());
 app.set("view engine","ejs");
 
 app.listen(3000,()=>{
@@ -22,10 +23,7 @@ app.use('/', registerRoutes);
 
 app.use('/', cartRoutes );
 
-app.use('/', detalleRoutes)
-
-
-app.use('/', loginRoutes)
+app.use('/', detalleRoutes);
 
 app.use('/', loginRoutes);
 

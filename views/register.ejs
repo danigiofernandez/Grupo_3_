@@ -23,15 +23,36 @@
                     Datos:
                 </h2>
             </div>
-        <form class="form" method="POST">
+        <form action="" class="form" method="POST">
             <div class= "contenedor-datos">
-                    <label>Nombre</label><input type="text" heigth="20" name= "nombreDeUsuario" required>
+                   
+                    <label>Nombre</label><input type="text" heigth="20" name= "nombre">
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div class="errors">
+                            <%= errors.nombre.msg %> 
+                        </div>
+                    <% } %>
                     <br>
-                    <label>Apellido</label><input type="text" name= "apellido" required>
+                    <label>Apellido</label><input type="text" name= "apellido" >
+                    <% if (locals.errors && errors.apellido) { %>
+                        <div class="errors">
+                            <%= errors.apellido.msg %> 
+                        </div>
+                    <% } %>
                     <br>
-                    <label>Dirección</label><input type="text" name= "direccion" required>
+                    <label>Dirección</label><input type="text" name= "direccion" >
+                    <% if (locals.errors && errors.direccion) { %>
+                        <div class="errors">
+                            <%= errors.direccion.msg %> 
+                        </div>
+                    <% } %>
                     <br>
-                    <label>Email</label><input type="email" name= "email" required>
+                    <label>Email</label><input type="email" name= "email" >
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="errors">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
             </div>
             <div class="caja-contraseña">
                 <h2>
@@ -40,17 +61,27 @@
             </div>
             <br>
             <div class="contenedor-contraseña">
-                    <label>Ingrese Contraseña</label><input type="password" name="password" required>
+                    <label>Ingrese Contraseña</label><input type="password" name="password" >
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="errors">
+                            <%= errors.password.msg %> 
+                        </div>
+                    <% } %>
                     <br>
-                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword" required>
+                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword" >
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="errors">
+                            <%= errors.password.msg %> 
+                        </div>
+                    <% } %>
             </div>
             <div class="buttons">
                 <button type="reset">Borrar</button>
                 <br>
                 <button type="submit">Crear Usuario</button>
             </div>
-            
         </form>
+        
         <footer>
             <%- include('./partials/footer')%>
         </footer>
