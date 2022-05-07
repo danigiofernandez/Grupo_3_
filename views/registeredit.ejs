@@ -8,7 +8,32 @@
     <title>Editando Usuario</title>
 </head>
 <body>
-   asdasd
+    <%- include('./partials/header')%>
+    <br>
+    <br>    
+    <br>
+   <h1 style="text-align:center">Recuperar contraseña</h1>
+    <br>
+   <div style="text-align:center">
+       <form action="\src\data?_method=PUT" method="POST"> <!-- lo que figura en action es 100% necesario para usar PUT-->
+       <label for=""> Usuario: </label>
+        <br>
+        <input type="text" name="nombre">
+        <br>
+        <label for=""> Email de contacto: </label>
+        <br>
+        <input type="text" name="nombre">
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+        </form>
+   </div>
 
 </body>
+    <br>
+    <br>
+    <br>   
+<footer> 
+    <%- include('./partials/footer')%>
+</footer>
 </html>
