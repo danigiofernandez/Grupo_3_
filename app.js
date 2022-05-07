@@ -9,12 +9,14 @@ const loginRoutes = require ('./routes/login');
 const registereditRoutes = require('./routes/registeredit') //agrego require de la nueva ruta
 const publiPath=path.resolve(__dirname,'./public');
 const methodOverride = require('method-override') //permite manejar peticiones PUT y DELETE. para ello se instala el paquete npm install method-override --save
+const logMiddleware = require('./Middlewares/logmiddleware');// permite manejar el logmiddleware. Es el log de donde entro el usuario.
 
 app.use(express.static(publiPath));
 app.use(express.urlencoded({ extended:false}));// permite manejar peticiones POST 
 app.use(express.json()); //devuelve la peticion POST en formato json
 app.set("view engine","ejs");
 app.use(methodOverride('_method')) // metodo para poder manejar peticiones PUT y DELETE
+app.use(logMiddleware)// permite usar el middleware del log. Gracias a esto Cruza toda la aplicacion.
 
 app.listen(3000,()=>{
     console.log('Servidor Corriendo');
