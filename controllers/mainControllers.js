@@ -52,8 +52,8 @@ const mainControllers = {
     res.render("login");
   },
 
-  registeredit: (req, res)=>{
-    res.render("registeredit");
+  registerEdit: (req, res)=>{
+    res.render("registerEdit");
   } //agrego ruta en el controlador para renderizar la pagina register edit
 
 };

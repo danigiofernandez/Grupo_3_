@@ -6,7 +6,7 @@ const registerRoutes = require('./routes/register');
 const cartRoutes = require('./routes/cart');
 const detalleRoutes = require('./routes/detalle');
 const loginRoutes = require ('./routes/login');
-const registereditRoutes = require('./routes/registeredit') //agrego require de la nueva ruta
+const registerEditRoutes = require('./routes/registeredit') //agrego require de la nueva ruta
 const publiPath=path.resolve(__dirname,'./public');
 const methodOverride = require('method-override') //permite manejar peticiones PUT y DELETE. para ello se instala el paquete npm install method-override --save
 const logMiddleware = require('./Middlewares/logmiddleware');// permite manejar el logmiddleware. Es el log de donde entro el usuario.
@@ -32,7 +32,7 @@ app.use('/', detalleRoutes);
 
 app.use('/', loginRoutes);
 
-app.use('/', registereditRoutes) // app use de la nueva ruta register edit
+app.use('/', registerEditRoutes) // app use de la nueva ruta register edit
 
 app.use((req,res,next)=>{
       res.status(404).render("not-found");
