@@ -15,30 +15,13 @@
             rel="stylesheet">
     
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <%- include('./partials/head')%>
     </head>
 
     <body class="cuerpo">
-
-        <section>
-            <div class="menutop">
-                <nav class="navhome">
-                    <a class="iconohome" href="\">
-                        <img src="\images\logotipo-central.png">
-                    </a>    
-                </nav>
-                <div class="botones">
-                    <div class="button1" action="" method="GET">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="button2" action="" method="GET">
-                        <a href="\cart"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                    <div class="button3" action="" method="GET">
-                        <a href="\login"><i class="fas fa-user"></i></a>
-                    </div>
-                </div>
-            </div> 
-        </section>
+        
+            <%- include('./partials/header')%>
+        
         <br>
         <section class="section1">
             <h1>
@@ -133,6 +116,6 @@
                 </div>
             </div><!-->
     <footer>
-
+        <%- include('./partials/footer')%>
     </footer>
 </html>
