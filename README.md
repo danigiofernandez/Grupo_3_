@@ -27,3 +27,15 @@ https://alquilotodo.com.ar/
 
 Plataforma Utilizada para Tablero de Trabajo:
 https://trello.com/b/sSHGbIUO/grupo-3-proyecto
+
+# sacar recientes del header. 
+# eliminar telegram
+# hacer pag de instagram 
+# SPRINT 5: mover los archivos de middlewares a carpeta src y corregir rutas
+    # implementar multer y ver si es posible bcrypt.
+    # arreglar el action de login. 
+    # ver la clase 25 de express. ahi esta express validator para solucionar esto
+# SPRINT 6: VER
+# SPRINT 7: VER
+# SPRINT 8: VER
+
