@@ -18,6 +18,7 @@ app.set("view engine","ejs");
 app.use(methodOverride('_method')) // metodo para poder manejar peticiones PUT y DELETE
 //app.use(logMiddleware)// permite usar el middleware del log. Gracias a esto Cruza toda la aplicacion.
 
+
 app.listen(3000,()=>{
     console.log('Servidor Corriendo');
 });
