@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-04-2022 a las 02:30:49
+-- Tiempo de generación: 19-05-2022 a las 01:56:23
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -32,6 +32,23 @@ CREATE TABLE `brand` (
   `brand_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `brand`
+--
+
+INSERT INTO `brand` (`brand_id`, `brand_name`) VALUES
+(1, 'BOSCH'),
+(2, 'FEMA'),
+(3, 'STANLEY'),
+(4, 'GADNIC'),
+(5, 'BLACK-DECKER'),
+(6, 'BREMEN'),
+(7, 'NIWA'),
+(8, 'LUSQTOFF'),
+(9, 'EINHELL'),
+(10, 'GLADIATOR'),
+(11, 'KSEIBI');
+
 -- --------------------------------------------------------
 
 --
@@ -52,22 +69,26 @@ CREATE TABLE `comment` (
 CREATE TABLE `product` (
   `product_id` int(11) NOT NULL,
   `product_name` varchar(50) NOT NULL,
-  `product_type_id` int(20) NOT NULL,
   `product_price` decimal(10,0) NOT NULL,
   `product_brand_id` int(11) NOT NULL,
   `product_user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `product_type`
+-- Volcado de datos para la tabla `product`
 --
 
-CREATE TABLE `product_type` (
-  `type_id` int(11) NOT NULL,
-  `type_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `product` (`product_id`, `product_name`, `product_price`, `product_brand_id`, `product_user_id`) VALUES
+(1, 'COMPRESOR AIRE', '8600', 2, 0),
+(2, 'GABINETE CARRO', '21000', 4, 0),
+(3, 'GABINETE CARRO', '24000', 3, 0),
+(4, 'HIDROLAVADORA', '14000', 4, 0),
+(5, 'HIDROLAVADORA', '17500', 4, 0),
+(6, 'MOTOSIERRA', '34000', 1, 0),
+(7, 'ROTOMARTILLO', '23000', 1, 0),
+(8, 'ROTOMARTILLO', '25670', 9, 0),
+(10, 'SET HERRAMIENTAS', '35700', 6, 0),
+(11, 'SET HERRAMIENTAS', '32000', 11, 0);
 
 -- --------------------------------------------------------
 
@@ -85,6 +106,15 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='tabla usuarios';
 
 --
+-- Volcado de datos para la tabla `user`
+--
+
+INSERT INTO `user` (`user_id`, `user_name`, `user_name_alias`, `user_password`, `user_mail`, `user_comment_id`) VALUES
+(1, 'DANIEL FERNANDEZ', 'danif', '', 'danif@hermaq.com', 0),
+(2, 'FERNANDO CABRED', 'fercabred', '', 'fercabred@hermaq.com', 0),
+(3, 'GUILLERMO PALMA', 'guillep', '', 'guillep@hermaq.com', 0);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -92,7 +122,8 @@ CREATE TABLE `user` (
 -- Indices de la tabla `brand`
 --
 ALTER TABLE `brand`
-  ADD PRIMARY KEY (`brand_id`);
+  ADD PRIMARY KEY (`brand_id`),
+  ADD KEY `brand_id` (`brand_id`,`brand_name`);
 
 --
 -- Indices de la tabla `comment`
@@ -106,14 +137,7 @@ ALTER TABLE `comment`
 ALTER TABLE `product`
   ADD PRIMARY KEY (`product_id`),
   ADD KEY `product_brand_id` (`product_brand_id`),
-  ADD KEY `product_type_id` (`product_type_id`),
   ADD KEY `product_user_id` (`product_user_id`);
-
---
--- Indices de la tabla `product_type`
---
-ALTER TABLE `product_type`
-  ADD PRIMARY KEY (`type_id`);
 
 --
 -- Indices de la tabla `user`
@@ -130,7 +154,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `brand`
 --
 ALTER TABLE `brand`
-  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
@@ -140,15 +164,7 @@ ALTER TABLE `brand`
 -- Filtros para la tabla `product`
 --
 ALTER TABLE `product`
-  ADD CONSTRAINT `product_brand_id` FOREIGN KEY (`product_brand_id`) REFERENCES `brand` (`brand_id`),
-  ADD CONSTRAINT `product_type_id` FOREIGN KEY (`product_type_id`) REFERENCES `product_type` (`type_id`),
-  ADD CONSTRAINT `product_user_id` FOREIGN KEY (`product_user_id`) REFERENCES `user` (`user_id`);
-
---
--- Filtros para la tabla `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_comment_id` FOREIGN KEY (`user_comment_id`) REFERENCES `comment` (`comment_id`);
+  ADD CONSTRAINT `product_brand_id` FOREIGN KEY (`product_brand_id`) REFERENCES `brand` (`brand_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
