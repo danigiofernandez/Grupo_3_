@@ -1,9 +1,9 @@
 const { json } = require("express");
 const {validationResult} = require("express-validator");
-
 const fs = require ('fs');
 const path = require ('path')
 const userDataBase = require ('../src/data/userDataBase.json')
+const storage = require('../middlewares/storage')
 
 const mainControllers = {
   index: (req, res) => {
@@ -15,6 +15,7 @@ const mainControllers = {
   },
   
   create: (req, res)=>{
+    
     const resultValidation = validationResult (req);
 
     if (resultValidation.errors.length > 0) {
@@ -35,6 +36,7 @@ const mainControllers = {
       usersparser.push(usuarios)
       fs.writeFileSync(path.join(__dirname, '../src/data/userDataBase.json'), JSON.stringify(usersparser), 'utf-8');
       res.redirect('/login');
+      
       
     }
 

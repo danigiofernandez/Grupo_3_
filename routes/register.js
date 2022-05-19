@@ -4,8 +4,11 @@ const validations = require ('../Middlewares/validations')
 const mainControllers = require('../controllers/mainControllers');
 const { body } = require('express-validator');
 //const usersMiddleware = require('..//Middlewares/users')
+const multer = require('multer');
+const uploadFile = require ('../middlewares/storage')
+
 
 router.get('/register', mainControllers.register);
-router.post('/register', validations, mainControllers.create);
+router.post('/register', uploadFile.single('imagenUsuario'), validations, mainControllers.create);
 
 module.exports = router;
