@@ -22,6 +22,7 @@ app.use(session ({secret : 'something',
     resave: true,
     saveUninitialized: true})) // agrego middleware para session. al final del app.js explicacion de resave y saveUninitialized. As the warnings say, the default values will change so they want to ensure that by setting the values explicitly now, you won't run into unexpected behavior when the defaults do change (in the near future).
 
+
 app.listen(3000,()=>{
     console.log('Servidor Corriendo');
 });
