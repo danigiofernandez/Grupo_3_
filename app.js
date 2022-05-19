@@ -10,6 +10,7 @@ const loginRoutes = require ('./routes/login');
 const publiPath=path.resolve(__dirname,'./public');
 const methodOverride = require('method-override') //permite manejar peticiones PUT y DELETE. para ello se instala el paquete npm install method-override --save
 //const logMiddleware = require('./Middlewares/logmiddleware');// permite manejar el logmiddleware. Es el log de donde entro el usuario.
+const session = require('express-session'); // requide de session
 
 app.use(express.static(publiPath));
 app.use(express.urlencoded({ extended:false}));// permite manejar peticiones POST 
@@ -17,6 +18,9 @@ app.use(express.json()); //devuelve la peticion POST en formato json
 app.set("view engine","ejs");
 app.use(methodOverride('_method')) // metodo para poder manejar peticiones PUT y DELETE
 //app.use(logMiddleware)// permite usar el middleware del log. Gracias a esto Cruza toda la aplicacion.
+app.use(session ({secret : 'something',
+    resave: true,
+    saveUninitialized: true})) // agrego middleware para session. al final del app.js explicacion de resave y saveUninitialized. As the warnings say, the default values will change so they want to ensure that by setting the values explicitly now, you won't run into unexpected behavior when the defaults do change (in the near future).
 
 app.listen(3000,()=>{
     console.log('Servidor Corriendo');
