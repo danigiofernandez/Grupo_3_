@@ -5,8 +5,8 @@ const validationCreateUser = [
     body ("apellido").notEmpty().withMessage('Debes ingresar un apellido').isLength({ min: 2 }).bail(),
     body ("direccion").notEmpty().withMessage('Debes ingresar una dirección').bail(),
     body ("email").notEmpty().withMessage('Debes ingresar un email').bail().isEmail().withMessage('Debes ingresar un formato de email válido'),
-    body ("password").notEmpty().withMessage('Debes ingresar una contraseña').isLength({ min: 8 }).withMessage('Debes ingresar una contraseña con al menos 8 carácteres'),isAlphanumeric().bail(),
-    body ("confirmPassword").notEmpty().withMessage('Debes ingresar una contraseña').isLength({ min: 8 }),isAlphanumeric().bail(),
+    body ("password").notEmpty().withMessage('Debes ingresar una contraseña').isLength({ min: 8 }).withMessage('Debes ingresar una contraseña con al menos 8 carácteres').isAlphanumeric().bail(),
+    body ("confirmPassword").notEmpty().withMessage('Debes ingresar una contraseña').isLength({ min: 8 }).isAlphanumeric().bail(),
     body('imagenUsuario').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = [".jpg", ".png",".gif"];
