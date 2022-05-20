@@ -35,11 +35,16 @@ const mainControllers = {
       const usersparser = JSON.parse(oldusers)
       usersparser.push(usuarios)
       fs.writeFileSync(path.join(__dirname, '../src/data/userDataBase.json'), JSON.stringify(usersparser), 'utf-8');
+      
       res.redirect('/login');
       
-      
     }
-
+    if(req.file != undefined){
+        avatar = req.file.filename;
+    }else{
+        avatar = 'default-image-png';
+    }
+    
   },
 
   detalle:(req, res)=>{

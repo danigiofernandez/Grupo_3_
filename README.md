@@ -36,6 +36,40 @@ https://trello.com/b/sSHGbIUO/grupo-3-proyecto
     # arreglar el action de login. 
     # ver la clase 25 de express. ahi esta express validator para solucionar esto
 # SPRINT 6: VER
+● Usuarios (recuerden ver los campos sugeridos en el sprint 3).
+● Productos (recuerden ver los campos sugeridos en el sprint 3).
+● Tablas secundarias (según lo requiera su proyecto).
+○ Para productos: categorías, marcas, colores, talles, etc.
+○ (Opcional) Para usuarios: categorías.
+● (Opcional) Carrito de compras.
+○ Con detalle de quién hizo la compra, cantidad de ítems y precio total.
+● (Opcional) Productos de cada carrito de compras.
+
+        Entregable: diagrama de entidad-relación de su
+base de datos en formato PDF.
+
+* Les pedimos que en su sitio se pueda:
+● Para productos:
+○ Crear
+○ Editar
+○ Eliminar
+○ Listar
+○ Ver el detalle
+○ Buscar
+
+* Para usuarios:
+○ Crear
+○ Editar
+○ Ver el detalle
+
+
 # SPRINT 7: VER
+
+*Falta solo que no se repita Email con uno ya existente
+*Falta login validar usuario con usuario en db
+
+
 # SPRINT 8: VER
+
+
 

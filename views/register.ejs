@@ -26,14 +26,14 @@
         <form action="/register" class="form" method="POST" enctype="multipart/form-data ">
             <div class= "contenedor-datos">
                    
-                    <label>Nombre</label><input type="text" heigth="20" name= "nombre">
+                    <label>Nombre</label><input type="text" minlength = "2" heigth="20" name= "nombre" required>
                     <% if (locals.errors && errors.nombre) { %>
                         <div class="errors">
                             <%= errors.nombre.msg %> 
                         </div>
                     <% } %>
                     <br>
-                    <label>Apellido</label><input type="text" name= "apellido" >
+                    <label>Apellido</label><input type="text" minlength = "2" name= "apellido" required>
                     <% if (locals.errors && errors.apellido) { %>
                         <div class="errors">
                             <%= errors.apellido.msg %> 
@@ -47,7 +47,7 @@
                         </div>
                     <% } %>
                     <br>
-                    <label>Email</label><input type="email" name= "email" >
+                    <label>Email</label><input type="email" name= "email" required>
                     <% if (locals.errors && errors.email) { %>
                         <div class="errors">
                             <%= errors.email.msg %> 
@@ -57,6 +57,9 @@
                     <label>Imagen de perfil</label>
                     <br>
                     <input type='file' name="imagenUsuario">
+                    <% if (locals.errors && errors.imagenUsuario) { %>
+                        <div> <%= errors.imagenUsuario.msg %>  </div>
+                      <% } %>
                     <br>
             </div>
             <div class="caja-contraseña">
@@ -66,14 +69,14 @@
             </div>
             <br>
             <div class="contenedor-contraseña">
-                    <label>Ingrese Contraseña</label><input type="password" name="password" >
+                    <label>Ingrese Contraseña</label><input type="password" minlength = "8" name="password" required>
                     <% if (locals.errors && errors.password) { %>
                         <div class="errors">
                             <%= errors.password.msg %> 
                         </div>
                     <% } %>
                     <br>
-                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword" >
+                    <label>Confirmar contraseña</label><input type="password" minlength = "8" name="confirmPassword" required>
                     <% if (locals.errors && errors.password) { %>
                         <div class="errors">
                             <%= errors.password.msg %> 
