@@ -6,9 +6,11 @@ const registerRoutes = require('./routes/register');
 const cartRoutes = require('./routes/cart');
 const detalleRoutes = require('./routes/detalle');
 const loginRoutes = require ('./routes/login');
-//const registerEditRoutes = require('./routes/registeredit') //agrego require de la nueva ruta
+const registerEditRoutes = require('./routes/registeredit') 
+//agrego require de la nueva ruta
 const publiPath=path.resolve(__dirname,'./public');
-const methodOverride = require('method-override') //permite manejar peticiones PUT y DELETE. para ello se instala el paquete npm install method-override --save
+const methodOverride = require('method-override')
+//permite manejar peticiones PUT y DELETE. para ello se instala el paquete npm install method-override --save
 //const logMiddleware = require('./Middlewares/logmiddleware');// permite manejar el logmiddleware. Es el log de donde entro el usuario.
 const session = require('express-session'); // requide de session
 
@@ -20,7 +22,8 @@ app.use(methodOverride('_method')) // metodo para poder manejar peticiones PUT y
 //app.use(logMiddleware)// permite usar el middleware del log. Gracias a esto Cruza toda la aplicacion.
 app.use(session ({secret : 'something',
     resave: true,
-    saveUninitialized: true})) // agrego middleware para session. al final del app.js explicacion de resave y saveUninitialized. As the warnings say, the default values will change so they want to ensure that by setting the values explicitly now, you won't run into unexpected behavior when the defaults do change (in the near future).
+    saveUninitialized: true})) // agrego middleware para session. al final del app.js explicacion de resave y saveUninitialized. 
+    //As the warnings say, the default values will change so they want to ensure that by setting the values explicitly now, you won't run into unexpected behavior when the defaults do change (in the near future).
 
 
 app.listen(3000,()=>{
@@ -37,7 +40,7 @@ app.use('/', detalleRoutes);
 
 app.use('/', loginRoutes);
 
-//app.use('/', registerEditRoutes) // app use de la nueva ruta register edit
+app.use('/', registerEditRoutes) // app use de la nueva ruta register edit
 
 app.use((req,res,next)=>{
       res.status(404).render("not-found");
