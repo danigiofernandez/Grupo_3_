@@ -8,6 +8,8 @@ const detalleRoutes = require('./routes/detalle');
 const loginRoutes = require ('./routes/login');
 const registerEditRoutes = require('./routes/registeredit') 
 //agrego require de la nueva ruta
+const productRoutes = require('./routes/product');
+
 const publiPath=path.resolve(__dirname,'./public');
 const methodOverride = require('method-override')
 //permite manejar peticiones PUT y DELETE. para ello se instala el paquete npm install method-override --save
@@ -41,6 +43,8 @@ app.use('/', detalleRoutes);
 app.use('/', loginRoutes);
 
 app.use('/', registerEditRoutes) // app use de la nueva ruta register edit
+
+app.use('/', productRoutes);
 
 app.use((req,res,next)=>{
       res.status(404).render("not-found");
