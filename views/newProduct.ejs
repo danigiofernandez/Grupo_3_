@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- recordar incluir head en las hojas -->
+        <%- include('./partials/head')%>
+        <title>Nuevo Producto</title>
+        <link rel="stylesheet" href="/css/register.css">
+    </head>
+    
+
+<body>
+    <div class= "contenedor">
+        <header>
+            <div class="logo" href="/">
+                <a href="\"> <img width="50%" src="/images/logotipo-central.png" alt="Logo Hermaq"></a>
+            </div>
+        </header>
+            <h1>
+                Nuevo Producto
+            </h1>
+            
+        <form action="/index" class="form" method="POST" enctype="multipart/form-data ">
+            <div class= "contenedor-datos-product">
+                   
+                    <label>Nombre</label>
+                    <br>
+                    <input type="text" minlength = "2" heigth="20" name= "nombreProducto" required>
+                    <% if (locals.errors && errors.nombreProducto) { %>
+                        <div class="errors">
+                            <%= errors.nombreProducto.msg %> 
+                        </div>
+                    <% } %>
+                    <br>
+                    <br>
+                    <label>Descripción</label>
+                    <br>
+                    <input class="descripcionProduct" type="text" minlength = "2" name= "descripcion" required>
+                    <% if (locals.errors && errors.descripcion) { %>
+                        <div class="errors">
+                            <%= errors.descripcion.msg %> 
+                        </div>
+                    <% } %>
+                    <br>
+                    <br>
+                    <label>Precio  $</label>
+                    <input class="precio" type="number" name= "precio" >
+                    <% if (locals.errors && errors.precio) { %>
+                        <div class="errors">
+                            <%= errors.precio.msg %> 
+                        </div>
+                    <% } %>
+                    <br>
+                    <br>
+                    <label>Descuento</label><input class="descuento" type="number" name= "descuento" required>
+                    <% if (locals.errors && errors.descuento) { %>
+                        <div class="errors">
+                            <%= errors.descuento.msg %> 
+                        </div>
+                    <% } %>
+                    <br>
+                    <br>
+                    <label>Imagen de producto</label>
+                    <br>
+                    <br>
+                    <input type='file' name="imagenProducto">
+                    <% if (locals.errors && errors.imagenProducto) { %>
+                        <div> <%= errors.imagenProducto.msg %>  </div>
+                      <% } %>
+                    <br>
+            </div>
+            
+            <div class="buttons">
+                <button type="reset">Borrar</button>
+                <br>
+                <button type="submit">Crear producto</button>
+            </div>
+        </form>
+        
+        <footer>
+            <%- include('./partials/footer')%>
+        </footer>
+    </div>
+</body>
+
+</html>

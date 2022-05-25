@@ -65,6 +65,11 @@ const mainControllers = {
     res.render("registerEdit");
   }, //agrego ruta en el controlador para renderizar la pagina register edit
 
+  product: (req, res)=>{
+    res.render("newProduct");
+  }, //agrego ruta en el controlador para renderizar la pagina register edit
+
+
 };
 
 
