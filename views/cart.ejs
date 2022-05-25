@@ -1,104 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- agrego el head de clara-->
-<%- include('./partials/head')%>
+<head>
+    <%- include('./partials/head')%>
+</head>
+<header>
+    <%- include('./partials/header')%>
+</header>
+ <body>
 
-    <body>
-        <div class="encabezado">
-            <div class="icon">
-                <a class="icon" href="\login"><i class="fas fa-user"></i></a>
-            </div>
-        </div>
-        <div class="contenedor">
-            <%- include('./partials/header')%>
-        </div>
-        <section class="banner">
-            <img src="/images/tool22.jpg" alt="Banner">
-        </section>
-        <div class="menu-pro">
-
-            <span>Recientes</span>
-            <span>Ofertas Especiales</span>
-            <span>Populares</span>
-        </div>
     
-    <main>
-        <div id="ContainerCarro">
-            <div id="ContainerCarroPal">
-                <div id="Contenido">
-                    <div class="mainTitulo">
-                        <h1 class="tituloCart">Mi Carrito</h1>
-                    </div>
-                </div>
-                <div id="totalCartHeader">
-                    <div class="accionCartHeader">
-                        <div class="tacho">
-                            <a><i class="fas fa-trash-alt"></i> Vaciar Carrito</a>
-                        
-                       </div>
-                    </div>
-                    <div style="min-width:15px;min-height: 1px; float: left;"></div>
-                    <div class="accionCartHeader">
-                        <input type="button" value="Guardar Carrito">
-                    </div>
-                    <div class="totalCarrito">
-                        <p class="TotalCaja">Total : 
-                            <span id="ValorTotal">$4050.00</span>
-                        <span><input id="botonPago" type="submit" value="Pagar"></span>
-                        </p>
-                        <p id="leyendaTotal">Los descuentos se aplicaran al momento del cobro</p>
-                    </div>
-                </div>
-            </div>
-            <article id="listaPlanes">
-                <div class="TopLista">
-                  <div id="topname">
-                    <h2 id="nombreLista">Servicios añadidos</h2>
-                  </div>
-                </div>
-                <div id="headerTable">
-                    <h3 class="itemName">Plan</h3>
-                    <h3 class="price">Precio</h3>
-                </div>
-                <div id="articuloItem">
-                    <div class="Item">
-                        <input type="button" id="deletebutton" value="X">
-                        <a id="planservice">HERRAMIENTAS 1</a>
-                    </div>
-                    <p class="precioTotal">$2150.00</p>
-                </div>
-                <div id="articuloItem2">
-                    <div class="Item">
-                        <input type="button" id="deletebutton" value="X">
-                        <a id="planservice">HERRAMIENTAS 2</a>
-                    </div>
-                    <p class="precioTotal">$1900.00</p>
-                </div>
-            </article>
-            <div id="ContainerCarroPal">
-                <div id="totalCartHeader">
-                    <div class="accionCartHeader">
-                        <input type="button" value="Vaciar Carrito">
-                    </div>
-                    <div style="min-width:15px;min-height: 1px; float: left;"></div>
-                    <div class="accionCartHeader">
-                        <input type="button" value="Guardar Carrito">
-                    </div>
-                    <div class="totalCarrito">
-                        <p class="TotalCaja">Total : 
-                            <span id="ValorTotal">$4050.00</span>
-                        <span><input id="botonPago" type="submit" value="Pagar"></span>
-                        </p>
-                        <p id="leyendaTotal">Los descuentos se aplicaran al momento del cobro</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-</body>
+
+ </body>   
 <!-- agrego el footer de clara-->
-    <footer>
+<br>
+<footer>
         <%- include('./partials/footer')%>
-    </footer>
+</footer>
 
 </html>
