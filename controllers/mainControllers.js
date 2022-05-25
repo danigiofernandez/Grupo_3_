@@ -4,10 +4,14 @@ const fs = require ('fs');
 const path = require ('path')
 const userDataBase = require ('../src/data/userDataBase.json')
 const storage = require('../middlewares/storage')
+const productsFilePath = path.join(__dirname, '../src/data/productDataBase.json'); //variable para conectar el JSON de basedatos
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//variable para conectar el JSON de basedato
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");//variable para conectar el JSON de basedato
 
 const mainControllers = {
   index: (req, res) => {
-    res.render("index")
+    // res.render("index")
+    res.render('index', {products: products, toThousand}) // render para hacer la vista dinamica con ejs
   },
 
   register: (req, res)=>{
@@ -48,8 +52,7 @@ const mainControllers = {
   },
 
   detalle:(req, res)=>{ 
-    res.send('detalle');
-    let product = products.find(product=>product.id==req.params.id)
+    const product = products.find(product=>product.id==req.params.id) // busqueda de productos por id
     res.render('detalle',{product,toThousand})
   },
 

@@ -2,46 +2,46 @@
     {
      "id": 2,
      "name": "Motosierra A Nafta",
-     "price": 18.400,
+     "price": 18400,
      "discount": 3,
      "category": "in-sale",
      "description": "Motosierra A Nafta. Importada de USA, Se entrega con la factura de compra para contar con la garantía del fabricante",
-     "image": "img-motosierra-Bosch"
+     "image": "img-motosierra-Bosch.jpg"
     },
     {
      "id": 3,
      "name": "Juego De Herramientas",
-     "price": 6.097,
+     "price": 6097,
      "discount": 25,
      "category": "in-sale",
      "description": "Juego de herramientas con 40 piezas. Se entrega con la factura de compra para contar con la garantía del fabricante",
-     "image": "img-set-herramientas-Bremen" 
+     "image": "img-set-herramientas-Bremen.jpg" 
     },
     {
      "id": 4,
      "name": "Compresor De Aire Electrico",
      "description": "Disfrutá de la potencia del compresor de aire electrico, capacidad 86 Litros.",
-     "price": 41.819,
+     "price": 41819,
      "discount": 10,
-     "image": "imp-compresor-aire-Niwa",
+     "image": "imp-compresor-aire-Niwa.jpg",
      "category": "in-sale"
     },
     {
      "id": 5,
      "name": "Rotomartillo Sds Max 10",
      "description": "Herramienta de uso profesional, Se entrega con la factura de compra para contar con la garantía del fabricante",
-     "price": 30.791,
+     "price": 30791,
      "discount": 20,
-     "image": "img-rotomartillo-Bosch",
+     "image": "img-rotomartillo-Bosch.png",
      "category": "in-sale"
     },
     {
         "id": 6,
         "name": "Hidrolavadora Alta Presión",
         "description": "Herramienta de uso profesional, Se entrega con la factura de compra para contar con la garantía del fabricante",
-        "price": 12.608,
+        "price": 12608,
         "discount": 20,
-        "image": "img-hidrolavadora-Gadnic",
+        "image": "img-hidrolavadora-Gadnic.jpg",
         "category": "in-sale"
     },
 
@@ -49,8 +49,8 @@
         "id": 7,
         "name": "Gabinete Carro",
         "description": "Herramienta de uso profesional, Se entrega con la factura de compra para contar con la garantía del fabricante",
-        "price": 78.906,
+        "price": 78906,
         "discount": 20,
-        "image": "img-gabinete-carro-Gladiator",
+        "image": "img-gabinete-carro-Gladiator.jpeg",
         "category": "in-sale"
        }]

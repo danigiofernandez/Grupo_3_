@@ -10,13 +10,13 @@ const registerEditRoutes = require('./routes/registeredit')
 //agrego require de la nueva ruta
 const productRoutes = require('./routes/product');
 
-const publiPath=path.resolve(__dirname,'./public');
+//const publiPath=path.resolve(__dirname,'./public'); se comenta, no es necesario ya esta app.use(express.static(public)))
 const methodOverride = require('method-override')
 //permite manejar peticiones PUT y DELETE. para ello se instala el paquete npm install method-override --save
 //const logMiddleware = require('./Middlewares/logmiddleware');// permite manejar el logmiddleware. Es el log de donde entro el usuario.
 const session = require('express-session'); // requide de session
 
-app.use(express.static(publiPath));
+app.use(express.static('public')); // antes estaba pasado como parametro de static la variable "publipath"
 app.use(express.urlencoded({ extended:false}));// permite manejar peticiones POST 
 app.use(express.json()); //devuelve la peticion POST en formato json
 app.set("view engine","ejs");
