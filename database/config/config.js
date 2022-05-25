@@ -3,8 +3,7 @@ module.exports = {
 
   "development": {
     "username": "root",
-    "password": "12345
-    ",
+    "password": "12345",
     "database": "hermaq_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
