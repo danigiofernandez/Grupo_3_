@@ -44,10 +44,15 @@ app.use('/', loginRoutes);
 
 app.use('/', registerEditRoutes) // app use de la nueva ruta register edit
 
-app.use('/', productRoutes);
+//importo para 
+//app.use('/product', productRoutes);
+//app.use('/user', userRoutes);
+//app.use('/brand', brandRoutes);
+
 
 app.use((req,res,next)=>{
       res.status(404).render("not-found");
     }
     );
 
+    module.exports = app;
