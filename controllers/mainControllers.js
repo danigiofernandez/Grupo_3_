@@ -6,7 +6,7 @@ const userDataBase = require ('../src/data/userDataBase.json')
 const storage = require('../middlewares/storage')
 const productsFilePath = path.join(__dirname, '../src/data/productDataBase.json'); //variable para conectar el JSON de basedatos
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));//variable para conectar el JSON de basedato
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");//variable para conectar el JSON de basedato
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");// para que se muestren decimales.
 
 const mainControllers = {
   index: (req, res) => {
