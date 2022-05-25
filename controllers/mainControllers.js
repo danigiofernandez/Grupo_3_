@@ -47,8 +47,10 @@ const mainControllers = {
     
   },
 
-  detalle:(req, res)=>{
-    res.render("detalle");
+  detalle:(req, res)=>{ 
+    res.send('detalle');
+    let product = products.find(product=>product.id==req.params.id)
+    res.render('detalle',{product,toThousand})
   },
 
   cart:(req, res)=>{
