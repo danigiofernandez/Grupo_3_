@@ -45,7 +45,7 @@ app.use('/', loginRoutes);
 app.use('/', registerEditRoutes) // app use de la nueva ruta register edit
 
 //importo para 
-//app.use('/product', productRoutes);
+app.use('/', productRoutes);
 //app.use('/user', userRoutes);
 //app.use('/brand', brandRoutes);
 

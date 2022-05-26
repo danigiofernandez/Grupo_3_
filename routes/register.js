@@ -9,6 +9,6 @@ const uploadFile = require ('../middlewares/storage')
 
 
 router.get('/register', mainControllers.register);
-router.post('/register', uploadFile.single('imagenUsuario'), validations, mainControllers.create);
+router.post('/register', uploadFile.single('imagenUsuario'), validations, mainControllers.product);
 
 module.exports = router;
