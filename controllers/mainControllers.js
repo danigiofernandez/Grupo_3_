@@ -57,7 +57,9 @@ const mainControllers = {
   },
 
   cart:(req, res)=>{
-    res.render("cart");
+    //const element = document.getElementById('#cantidad').value
+    const product = products.find(product=>product.id==req.params.id) // busqueda de productos por id
+    res.render('cart',{product,toThousand})
   },
 
   login: (req, res)=>{

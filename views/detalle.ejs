@@ -26,62 +26,23 @@
         <section class="section1">
 
             <div class="contenedorimg">
+                <h1>
+                    MOTOSIERRA PASSION
+                </h1>
                 <img src="/images/<%= product.image%>" " alt="<%= product.name %>" class="product-detail-img">
-                <p class="product-detail-description">
-                    <%= product.description %> 
-                </p>
             </div>
-
-            <div class="col-12 col-lg-4">
-                <article class="product-detail-info">
-                    <h2 class="product-detail-title"><%= product.name %></h2>
-                    <% let finalPrice = toThousand((product.price - (product.price * product.discount / 100)).toFixed(0));%>
-                        <% if (product.discount > 0) { 	%>
-                            <!-- Si el producto tiene descuento, muestra lo de abajo-->
-                            <p class="product-detail-price small">
-                                <span><%= toThousand(product.price) %></span>
-                                /
-                                <b><%= product.discount %>% OFF</b>
-                            </p>
-                            <p class="product-detail-price">
-                                $ <%= finalPrice %>
-                            </p>
-                        <% } else {  %>
-                            <!-- si no, muestra el precio --> 
-                            <p class="product-detail-price">
-                                $<%= finalPrice %> 
-                            </p>
-                        <% } %>
-
-           <!-- <h1>
-                Motosierra Passion 
-            </h1>
-                <div class="contenedorimg">
-                    <img class="imagen-producto"   src="./images/img-motosierra-Bosch.jpg" alt="imagenmotos">
-                </div>
             <div class="descripcion-producto">
               <h3>Especificaciones tecnicas:</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint omnis praesentium nam. Unde error quidem cupiditate aliquam, doloribus accusamus labore, a dolorem hic expedita mollitia autem vero! Saepe, sit tempora.
-              </p>
+              <p class="product-detail-description">
+                <%= product.description %> 
+            </p>
             </div>
-            -->
             <br>
             <br>
             <div class="cantidadycompra">
-                <form action="\cart">
-                    <select name="cantidad" id="cantidad" class="btncantidad">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select> 
-                    <a href="\cart"></a><input class="btncompra" type="submit" value="COMPRAR" ></a>
+                <form action="/cart/<%= product.id %>">
+                
+                    <input class="btncompra" type="submit" value="Ir al carro" ></a>
               </form>
             </div>
             <br>
