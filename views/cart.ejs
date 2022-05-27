@@ -27,11 +27,11 @@
                 </div>
             </div>
             <div class="right-bar">
-              <p><span>  <% let finalPrice = toThousand((product.price - (product.price * product.discount / 100)).toFixed(0));%>
+              <p> <% let finalPrice = toThousand((product.price - (product.price * product.discount / 100)).toFixed(0));%>
                 <% if (product.discount > 0) { 	%>
                     <!-- Si el producto tiene descuento, muestra lo de abajo-->
                     <p class="content">
-                        <span><b><%= toThousand(product.price) %></b></span>
+                        <b><%= toThousand(product.price) %></b>
                         /
                         <b><%= product.discount %>% OFF</b>
                     </p>
@@ -43,7 +43,7 @@
                     <p class="product-detail-price">
                            $<%= finalPrice %> 
                     </p>
-                <% } %> </span></p>
+                <% } %> </p>
                 
                 <a href="#"> <i class= "fa fa-shopping-cart"> Comprar </i></a>
             </div>
