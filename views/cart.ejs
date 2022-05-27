@@ -36,12 +36,12 @@
                         <b><%= product.discount %>% OFF</b>
                     </p>
                     <p class="content">
-                         $ <%= finalPrice %>
+                         <%= "Total:" + "  $" + finalPrice %>
                     </p>
                 <% } else {  %>
                     <!-- si no, muestra el precio --> 
                     <p class="product-detail-price">
-                           $<%= finalPrice %> 
+                        <%= "Total:" + "  $" + finalPrice %> 
                     </p>
                 <% } %> </p>
                 

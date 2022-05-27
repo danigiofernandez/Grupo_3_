@@ -33,9 +33,9 @@
                             <img src="/images/<%= product.image %>" class="img-width" alt="<%= product.name %>">
                             <div class="description-product">
                                
-                                <p class="price">$ <%= toThousand(finalPrice.toFixed(0)) %> </p>
+                                <p class="precio">$ <%= toThousand(finalPrice.toFixed(0)) %> </p>
                                 <% if(product.discount > 0) { %>
-                                    <p class="discount"> <%= product.discount %> % off</p>
+                                    <p class="descuento"> <%= product.discount %> % off</p>
                                 <% } %>
                                 <h4 class="hidden-product name-product"><%= product.name %></h4>
                             </div>
