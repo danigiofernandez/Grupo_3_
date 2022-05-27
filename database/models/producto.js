@@ -28,5 +28,22 @@ module.exports = (sequelize, dataTypes) => {
 
     const Producto = sequelize.define(alias, cols, config);
 
+    // Relaciones de SQL == Asociaciones en sequelize
+
+    Productos.associate = function(models) {
+
+        Productos.belongsToMany(
+            models.Marcas, 
+            {
+                through: 'product_brand_id',
+                foreignKey: 'brand_id',
+                as: 'brand',
+                timestamps: false
+
+            }
+        );
+
+    }
+
     return Producto;
 }
