@@ -18,6 +18,7 @@ const userController = {
             }
         )
             .then(user => {
+                console.log(user)
                 return res.json(user)
                 res.render('userList.ejs', { user })
             })

@@ -11,4 +11,6 @@ const uploadFile = require ('../middlewares/storage')
 router.get('/register', mainControllers.register);
 router.post('/register', uploadFile.single('imagenUsuario'), validations, mainControllers.product);
 
+//insertar la ruta para llamar al controlador de userController
+
 module.exports = router;
