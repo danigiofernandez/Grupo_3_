@@ -19,12 +19,12 @@
                 Nuevo Producto
             </h1>
             
-        <form action="/index" class="form" method="POST" enctype="multipart/form-data ">
+        <form action="/" class="form" method="POST" enctype="multipart/form-data ">
             <div class= "contenedor-datos-product">
                    
                     <label>Nombre</label>
                     <br>
-                    <input type="text" minlength = "2" heigth="20" name= "nombreProducto" required>
+                    <input type="text" minlength = "2" heigth="20" name="name" id="name" required>
                     <% if (locals.errors && errors.nombreProducto) { %>
                         <div class="errors">
                             <%= errors.nombreProducto.msg %> 
@@ -34,7 +34,7 @@
                     <br>
                     <label>Descripción</label>
                     <br>
-                    <input class="descripcionProduct" type="text" minlength = "2" name= "descripcion" required>
+                    <input class="descripcionProduct" type="text" minlength = "2" name= "description" required>
                     <% if (locals.errors && errors.descripcion) { %>
                         <div class="errors">
                             <%= errors.descripcion.msg %> 
@@ -43,7 +43,7 @@
                     <br>
                     <br>
                     <label>Precio  $</label>
-                    <input class="precio" type="number" name= "precio" >
+                    <input class="precio" type="number" name= "price" id="price" >
                     <% if (locals.errors && errors.precio) { %>
                         <div class="errors">
                             <%= errors.precio.msg %> 
@@ -51,7 +51,7 @@
                     <% } %>
                     <br>
                     <br>
-                    <label>Descuento</label><input class="descuento" type="number" name= "descuento" required>
+                    <label>Descuento</label><input class="descuento" type="number" id="discount" name= "discount" required>
                     <% if (locals.errors && errors.descuento) { %>
                         <div class="errors">
                             <%= errors.descuento.msg %> 
@@ -62,7 +62,7 @@
                     <label>Imagen de producto</label>
                     <br>
                     <br>
-                    <input type='file' name="imagenProducto">
+                    <input type='file' name="image" id="image">
                     <% if (locals.errors && errors.imagenProducto) { %>
                         <div> <%= errors.imagenProducto.msg %>  </div>
                       <% } %>

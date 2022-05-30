@@ -74,6 +74,30 @@ const mainControllers = {
     res.render("newProduct");
   }, //agrego ruta en el controlador para renderizar la pagina register edit
 
+  uploadProduct: (req, res)=>{
+     let image;
+
+    if(req.file != undefined){
+        image = req.file.filename;
+    }else{
+        image = 'default-image.jpg';
+    }
+
+    let idprod = products.map(p => p.id) // mapeo los productos del array json
+
+    let newProduct = {
+      id: Math.max(...idprod)+1,
+      ...req.body,
+      image: image
+    }
+
+    products.push(newProduct)
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
+
+      
+      res.redirect('/'); 
+  }
+
 
 };
 

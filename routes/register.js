@@ -9,7 +9,7 @@ const uploadFile = require ('../middlewares/storage')
 
 
 router.get('/register', mainControllers.register);
-//router.post('/register', uploadFile.single('imagenUsuario'), validations, mainControllers.product); dejo comentada esta ruta, renderiza la vista de new product y no es correcto.
+router.post('/register', uploadFile.single('imagenUsuario'), validations, mainControllers.index); //renderiza a home page
 
 //insertar la ruta para llamar al controlador de userController
 

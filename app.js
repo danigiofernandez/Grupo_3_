@@ -27,8 +27,8 @@ app.set("view engine","ejs");
 app.use(methodOverride('_method')) // metodo para poder manejar peticiones PUT y DELETE
 //app.use(logMiddleware)// permite usar el middleware del log. Gracias a esto Cruza toda la aplicacion.
 app.use(session ({secret : 'something',
-    resave: true,
-    saveUninitialized: true})) // agrego middleware para session. al final del app.js explicacion de resave y saveUninitialized. 
+    resave: false,
+    saveUninitialized: false})) // agrego middleware para session. al final del app.js explicacion de resave y saveUninitialized. 
     //As the warnings say, the default values will change so they want to ensure that by setting the values explicitly now, you won't run into unexpected behavior when the defaults do change (in the near future).
 
     //defino los parámetros de conexion a la base de datos
