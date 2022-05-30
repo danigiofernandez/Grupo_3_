@@ -2,6 +2,11 @@ const { json } = require("express");
 const {validationResult} = require("express-validator");
 const fs = require ('fs');
 const path = require ('path')
+//const db = require('../database/models');
+//const sequelize = db.sequelize;
+//const { Op } = require('sequelize');
+//const moment = require('moment');
+
 const userDataBase = require ('../src/data/userDataBase.json')
 const storage = require('../middlewares/storage')
 const productsFilePath = path.join(__dirname, '../src/data/productDataBase.json'); //variable para conectar el JSON de basedatos
