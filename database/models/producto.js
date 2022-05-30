@@ -9,6 +9,9 @@ module.exports = (sequelize, dataTypes) => {
                 primaryKey: true,
                 autoIncrements: true,
             },
+            product_name:{
+                type: dataTypes.STRING
+            },
             product_price: {type: dataTypes.DECIMAL(10,2),
 
             },

@@ -45,7 +45,7 @@ app.use(session ({secret : 'something',
         console.log('EL ERROR DE CONEXION ES:')
     })
 
-
+    
 app.listen(3000,()=>{
     console.log('Servidor Corriendo');
 });
