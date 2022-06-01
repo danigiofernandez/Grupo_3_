@@ -52,5 +52,19 @@
   "discount": 20,
   "image": "img-gabinete-carro-Gladiator.jpeg",
   "category": "in-sale"
+ },
+ {
+  "id": 9,
+  "name": "motodeprueba",
+  "description": "motode prueba",
+  "price": "123456",
+  "discount": "50",
+  "image": "default-image.jpg"
+ },
+ {
+  "id": 10,
+  "email": "asdasd",
+  "password": "asdasdasd",
+  "image": "default-image.jpg"
  }
 ]
