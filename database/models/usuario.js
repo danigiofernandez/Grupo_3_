@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
 
             },
             user_name_alias: {
-                type: data.Types.STRING
+                type: dataTypes.STRING
             },
             user_mail: {
                 type: dataTypes.STRING
@@ -26,8 +26,6 @@ module.exports = (sequelize, dataTypes) => {
         };
 
 
-    const Usuario = sequelize.define(alias, cols, config);
-    
-
-    return Usuario;
+    const Usuarios = sequelize.define(alias, cols, config);
+    return Usuarios;
 }

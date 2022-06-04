@@ -9,7 +9,7 @@ const detalleRoutes = require('./routes/detalle');
 const loginRoutes = require ('./routes/login');
 const registerEditRoutes = require('./routes/registeredit') 
 //agrego require de la nueva ruta
-const productRoutes = require('./routes/product');
+const productRoutes = require('./routes/product'); //ruta a product
 
 
 
@@ -63,8 +63,8 @@ app.use('/', loginRoutes);
 app.use('/', registerEditRoutes) // app use de la nueva ruta register edit
 
 //importo para 
-app.use('/', productRoutes);
-//app.use('/user', userRoutes);
+app.use('/', productRoutes); //  responden con el router product
+//app.use('/product', productRoutes); 
 //app.use('/brand', brandRoutes);
 
 

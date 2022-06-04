@@ -16,37 +16,44 @@ module.exports = (sequelize, dataTypes) => {
 
             },
             product_brand_id: {
-                type: data.Types.INTEGER,
+                type: dataTypes.INTEGER,
             },
             product_user_id: {
                 type: dataTypes.INTEGER,
             },
+            discount: {
+                type: dataTypes.DECIMAL(10,2),
+            },
+            description: {
+                type: dataTypes.TEXT
+            }
         };
 
         let config = {
             tableNames: 'product',
-            timestamps: false
+            timestamps: false,
+            freezeTableName: true
         };
 
 
-    const Producto = sequelize.define(alias, cols, config);
+    const Productos = sequelize.define(alias, cols, config);
 
     // Relaciones de SQL == Asociaciones en sequelize
 
-    Productos.associate = function(models) {
+    /*Productos.associate = function(models) {
 
-        Productos.belongsToMany(
+        Productos.belongsTo(
             models.Marcas, 
             {
-                through: 'product_brand_id',
+                //through: 'product_brand_id',
                 foreignKey: 'brand_id',
-                as: 'brand',
+                as: 'Marcas',
                 timestamps: false
 
             }
         );
 
-    }
+    }*/
 
-    return Producto;
+    return Productos;
 }

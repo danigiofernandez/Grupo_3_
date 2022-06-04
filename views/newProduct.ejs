@@ -67,6 +67,16 @@
                         <div> <%= errors.imagenProducto.msg %>  </div>
                       <% } %>
                     <br>
+                    <div>
+                    <label for="">brand </label>
+                        <%for (let i = 0; i < brand.length; i++) { %>
+                    <select name="brand_id" >
+                        <option value="<%=brand[i].brand_id%>">
+                            <%=brand[i].brand_name%>
+                        </option>
+                        <% } %>
+                    </select>
+                    </div>
             </div>
             
             <div class="buttons">

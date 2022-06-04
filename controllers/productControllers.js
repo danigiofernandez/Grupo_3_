@@ -1,12 +1,12 @@
 const db = require('../database/models');
-const sequelize = db.sequelize;
+//const sequelize = db.sequelize;
 
 //Otra forma de llamar a los modelos
 
-const Product = db.Product;
+//const Product = db.Product;
 
-const userController = {
-    'list': async (req, res) => {
+const productController = {
+   /* 'list': async (req, res) => {
 
             db.Product.findAll(
             {
@@ -44,26 +44,28 @@ const userController = {
             .then(product => {
                 res.render('newestProduct', { product });
             });
-    },
+    }, */
    
     //Aqui debemos modificar y completar lo necesario para trabajar con el CRUD
 
     add: function (req, res) {
         res.render('productAdd.ejs');
     },
-    create: async function (req, res) {
+    crear: function (req, res) {
+        db.Brand.findAll()
+            .then(function (brand) {
+                return res.render('newproduct', {brand:brand});
+            });
 
         // Recibo los datos del formulario completado en la petición
         // req.body == { name: valor, alias: valor }
-
-        try {
-            const productoCreado = await Product.create(req.body)
-            return res.send(productoCreado);
-        } catch (error) {
-            console.log(error);
-            return res.send('Hubo un error')
-        }
-
+        /* try {
+             const productoCreado = await Product.create(req.body)
+             return res.send(productoCreado);
+         } catch (error) {
+             console.log(error);
+             return res.send('Hubo un error')
+         }*/
     },
     edit: async function (req, res) {
 
