@@ -7,7 +7,6 @@ module.exports = (sequelize, dataTypes) => {
             brand_id: {
                 type: dataTypes.INTEGER,
                 primaryKey: true,
-                autoIncrements: true,
             },
             brand_name: {
                 type: dataTypes.STRING,
@@ -26,14 +25,14 @@ module.exports = (sequelize, dataTypes) => {
 
     // Relaciones de SQL == Asociaciones en sequelize
 
-    /* Marcas.associate = function(models) {
-        Marcas.hasMany(
-            models.productos, 
+     Brand.associate = function(models) {
+        Brand.hasMany(models.Product, 
             {
                 foreignKey: 'product_brand_id',
-                as: 'productos'
-            }
-        );
+                as: 'product',
+                freezeTableName: true
+            })
+        ;
 
         // movie.genre() == datos del genero que tiene esa movie
 
@@ -47,5 +46,7 @@ module.exports = (sequelize, dataTypes) => {
             }
         );
         }*/
-        return Brand;
+        
     }
+    return Brand;
+}

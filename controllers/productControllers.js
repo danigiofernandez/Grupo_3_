@@ -48,8 +48,38 @@ const productController = {
    
     //Aqui debemos modificar y completar lo necesario para trabajar con el CRUD
 
-    add: function (req, res) {
-        res.render('productAdd.ejs');
+    vertodos: function (req, res) {
+        db.Product.findAll()
+            .then(function(productos){
+                res.render('nuevoindex', {productos: productos});
+            })
+    },
+
+    guardar: function (req, res) {
+        let image;
+
+        if(req.file != undefined){
+            image = req.file.filename;
+        }else{
+            image = 'default-image.png';
+        }
+
+        /*let sumaid = db.Product.findOne({
+            where: { 
+                product_id: Math.max(db.product_id)}
+        }).then(a => {a + 1})*/
+
+        db.Product.create({
+            product_name: req.body.name,
+            product_price: req.body.price,
+            product_brand: req.body.brand,
+            discount: req.body.discount,
+            description: req.body.description,
+            image: req.body.image,
+           /* product_id: sumaid,*/
+           //
+        })
+        res.redirect('/')
     },
     crear: function (req, res) {
         db.Brand.findAll()

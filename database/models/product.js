@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
    
     //defino las variables alias y cols para armar los datos que lleva la tabla product   
     
-    let alias = 'Productos';
+    let alias = 'Product';
         let cols = {
             product_id: {
                 type: dataTypes.INTEGER,
@@ -15,18 +15,19 @@ module.exports = (sequelize, dataTypes) => {
             product_price: {type: dataTypes.DECIMAL(10,2),
 
             },
-            product_brand_id: {
-                type: dataTypes.INTEGER,
-            },
-            product_user_id: {
-                type: dataTypes.INTEGER,
+            product_brand: {
+                type: dataTypes.STRING,
             },
             discount: {
                 type: dataTypes.DECIMAL(10,2),
             },
             description: {
                 type: dataTypes.TEXT
-            }
+            },
+            image: {
+                type: dataTypes.STRING
+            },
+
         };
 
         let config = {
@@ -36,24 +37,23 @@ module.exports = (sequelize, dataTypes) => {
         };
 
 
-    const Productos = sequelize.define(alias, cols, config);
+    const Product = sequelize.define(alias, cols, config);
 
     // Relaciones de SQL == Asociaciones en sequelize
 
-    /*Productos.associate = function(models) {
 
-        Productos.belongsTo(
-            models.Marcas, 
+
+        Product.associate = function(models) {
+        this.belongsTo(
+            models.Brand, 
             {
                 //through: 'product_brand_id',
-                foreignKey: 'brand_id',
-                as: 'Marcas',
-                timestamps: false
+                foreignKey: 'product_brand_id',
+                as: 'brand',
+                freezeTableName: true
+            });
 
-            }
-        );
+    }
 
-    }*/
-
-    return Productos;
+    return Product;
 }
