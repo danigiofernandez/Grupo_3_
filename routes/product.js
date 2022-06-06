@@ -24,7 +24,14 @@ var upload = multer({ storage: storage });
 router.get('/crear', productControllers.crear);
 router.post('/crear', upload.single('image'), validations, productControllers.guardar);
 //Lectura:
-router.get('/', productControllers.vertodos) 
+router.get('/nuevoindex', productControllers.vertodos) 
+//Detalle:
+router.get('/detalle/:id', productControllers.detalle)
+//actualizar
+router.get('/detalle/editar/:id', productControllers.editar)
+router.post('/detalle/editar/:id', productControllers.actualizar)
+//borrar:
+router.post('/detalle/borrar/:id', productControllers.borrar)
 //router.post('/', upload.single('image'), mainControllers.uploadProduct)
 
 

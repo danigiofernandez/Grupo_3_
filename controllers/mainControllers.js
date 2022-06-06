@@ -56,10 +56,10 @@ const mainControllers = {
     
   },
 
-  detalle:(req, res)=>{ 
-    const product = products.find(product=>product.id==req.params.id) // busqueda de productos por id
-    res.render('detalle',{product,toThousand})
-  },
+  //detalle:(req, res)=>{ 
+    //const product = products.find(product=>product.id==req.params.id) // busqueda de productos por id
+    //res.render('detalle',{product,toThousand})
+  //},
 
   cart:(req, res)=>{
     //const element = document.getElementById('#cantidad').value

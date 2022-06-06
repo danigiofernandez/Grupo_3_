@@ -94,7 +94,31 @@
         </main>
         <%- include('./partials/footer')%>
             
+ <!-- </div>
+        <main>
+            <section>
+                <div class="products">
 
+                    <% product.forEach(product => { 
+                        let finalPrice = product.product_price - (product.product_price * product.discount / 100);
+                %>    
+                    <article class="article-product">
+                        <a href="/detalle/<%= product.product_id %>">
+                            <img src="/images/<%= product.image %>" class="img-width" alt="<%= product.product_name %>">
+                            <div class="description-product">
+                               
+                                <p class="precio">$ <%= toThousand(finalPrice.toFixed(0)) %> </p>
+                                <% if(product.discount > 0) { %>
+                                    <p class="descuento"> <%= product.discount %> % off</p>
+                                <% } %>
+                                <h4 class="hidden-product name-product"><%= product.product_name %></h4>
+                            </div>
+                        </a>
+                    </article>
+                <% } %>
+            </div>
+            </section>
+        </main> !-->
     </body>
 
 </html>

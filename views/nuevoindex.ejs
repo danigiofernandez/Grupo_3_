@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head')%>
+
+    <body>
+        <div class="encabezado">
+            <div class="icon">
+                <a class="icon" href="\login"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+        <div class="contenedor">
+            <%- include('./partials/header')%>
+        </div>
+        <section class="banner">
+            <img src="/images/tool22.jpg" alt="Banner">
+        </section>
+        <div class="menu-pro">
+
+            <span>Recientes</span>
+            <span>Ofertas Especiales</span>
+            <span>Populares</span>
+        </div>
+        <main>
+            <section>
+                <div class="products">
+
+                    <% product.forEach(product => { 
+                        let finalPrice = product.product_price - (product.product_price * product.discount / 100);
+                %>    
+                    <article class="article-product">
+                        <a href="/detalle/<%= product.product_id %>">
+                            <img src="/images/<%= product.image %>" class="img-width" alt="<%= product.product_name %>">
+                            <div class="description-product">
+                               
+                                <p class="precio">$ <%= toThousand(finalPrice.toFixed(0)) %> </p>
+                                <% if(product.discount > 0) { %>
+                                    <p class="descuento"> <%= product.discount %> % off</p>
+                                <% } %>
+                                <h4 class="hidden-product name-product"><%= product.product_name %></h4>
+                            </div>
+                        </a>
+                    </article>
+                <% }) %>
+            </div>
+
+    </body>
+    <footer>
+        <%- include('./partials/footer')%>
+    </footer>
+</html>

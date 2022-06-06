@@ -48,7 +48,7 @@ module.exports = (sequelize, dataTypes) => {
             models.Brand, 
             {
                 //through: 'product_brand_id',
-                foreignKey: 'product_brand_id',
+                foreignKey: 'product_brand',
                 as: 'brand',
                 freezeTableName: true
             });

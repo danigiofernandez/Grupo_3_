@@ -18,7 +18,7 @@ module.exports = {
       product_price: {
         type: dataTypes.DECIMAL
       },
-      product_brand_id: {
+      product_brand: {
         type: dataTypes.INTEGER
      },
       product_user_id: {

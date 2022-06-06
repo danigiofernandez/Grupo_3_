@@ -27,9 +27,9 @@
 
             <div class="contenedorimg">
                 <h1>
-                    <%= product.name %>
+                    <%= product.product_name %>
                 </h1>
-                <img src="/images/<%= product.image%>" " alt="<%= product.name %>" class="product-detail-img">
+                <img src="/images/<%= product.image%>" " alt="<%= product.product_name %>" class="product-detail-img">
             </div>
             <div class="descripcion-producto">
               <h3>Especificaciones tecnicas:</h3>
@@ -40,7 +40,7 @@
             <br>
             <br>
             <div class="cantidadycompra">
-                <form action="/cart/<%= product.id %>">
+                <form action="/cart/<%= product.product_id %>">
                 
                     <input class="btncompra" type="submit" value="Ir al carro" ></a>
               </form>
@@ -48,6 +48,15 @@
             <br>
             <div>
             <button class="btndisp">Consultar disponibilidad</button>
+            </div>
+            <br>
+            <div>
+                <form action="/detalle/borrar/<%= product.product_id %>" method="post" >
+                    <button type="submit" class="btndisp">Borrar</button>
+                </form>
+                <a href="/detalle/editar/<%= product.product_id %>">
+            <button class="btndisp">Editar</button>
+                </a>
             </div>
         </section>
             <br>

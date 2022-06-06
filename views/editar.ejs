@@ -11,20 +11,20 @@
 <body>
     <div class= "contenedor">
         <header>
-            <div class="logo" href="/">
+            <div class="logo" href="/nuevoindex">
                 <a href="/nuevoindex"> <img width="50%" src="/images/logotipo-central.png" alt="Logo Hermaq"></a>
             </div>
         </header>
             <h1>
-                Nuevo Producto
+                Editar producto
             </h1>
             
-        <form action="/crear" class="form" method="POST" >
+        <form action="/detalle/editar/<%= product.product_id %>" class="form" method="POST" >
             <div class= "contenedor-datos-product">
                    
                     <label>Nombre</label>
                     <br>
-                    <input type="text" minlength = "2" heigth="20" name="product_name" id="name" required>
+                    <input type="text" minlength = "2" heigth="20" name="product_name" id="name" value="<%= product.product_name %>" required>
                     <% if (locals.errors && errors.nombreProducto) { %>
                         <div class="errors">
                             <%= errors.nombreProducto.msg %> 
@@ -34,7 +34,7 @@
                     <br>
                     <label>Descripción</label>
                     <br>
-                    <input class="descripcionProduct" type="text" minlength = "2" name= "description" required>
+                    <input class="descripcionProduct" type="text" minlength = "2" name= "description" value="<%= product.descrition %>" required>
                     <% if (locals.errors && errors.descripcion) { %>
                         <div class="errors">
                             <%= errors.descripcion.msg %> 
@@ -43,7 +43,7 @@
                     <br>
                     <br>
                     <label>Precio  $</label>
-                    <input class="precio" type="number" name= "product_price" id="price" >
+                    <input class="precio" type="number" name= "product_price" id="price" value="<%= product.product_price %>">
                     <% if (locals.errors && errors.precio) { %>
                         <div class="errors">
                             <%= errors.precio.msg %> 
@@ -51,7 +51,7 @@
                     <% } %>
                     <br>
                     <br>
-                    <label>Descuento</label><input class="descuento" type="number" id="discount" name= "discount" required>
+                    <label>Descuento</label><input class="descuento" type="number" id="discount" name= "discount" required value="<%= product.discount %>">
                     <% if (locals.errors && errors.descuento) { %>
                         <div class="errors">
                             <%= errors.descuento.msg %> 
@@ -67,22 +67,12 @@
                         <div> <%= errors.imagenProducto.msg %>  </div>
                       <% } %>
                     <br>
-                    <div>
-                    <label for="">Marca </label>
-                        <select name="brand" >
-                            <%for (let i = 0; i < brand.length; i++) { %>
-                                <option value="<%brand[i].brand_id%>">
-                                    <%=brand[i].brand_name%>
-                                </option>
-                            <% } %>
-                    </select>
-                    </div>
             </div>
             
             <div class="buttons">
                 <button type="reset">Borrar</button>
                 <br>
-                <button type="submit">Crear producto</button>
+                <button type="submit">Editar!</button>
             </div>
         </form>
         
