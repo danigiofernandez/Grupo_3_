@@ -24,7 +24,7 @@ var upload = multer({ storage: storage });
 router.get('/crear', productControllers.crear);
 router.post('/crear', upload.single('image'), validations, productControllers.guardar);
 //Lectura:
-router.get('/nuevoindex', productControllers.vertodos) 
+router.get('/', productControllers.vertodos) 
 //Detalle:
 router.get('/detalle/:id', productControllers.detalle)
 //actualizar
