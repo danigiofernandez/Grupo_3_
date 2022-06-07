@@ -80,7 +80,7 @@ const productController = {
            /* product_id: sumaid,*/
            //
         })
-        res.redirect('/nuevoindex')
+        res.redirect('/')
     },
     crear: function (req, res) {
         db.Brand.findAll()

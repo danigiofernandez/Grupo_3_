@@ -15,7 +15,7 @@
                 <div class="box">
                     <img src="/images/<%= product.image%>" alt="<%= product.product_name %>" class="product-detail-img">
                     <div class="content">
-                       <%= product.name %>
+                       <%= product.product_name %>
                        <p class="unit"> Cantidad: <input value="1"></p>
 
                        <p class="btn-area">
@@ -27,11 +27,11 @@
                 </div>
             </div>
             <div class="right-bar">
-              <p> <% let finalPrice = toThousand((product.price - (product.price * product.discount / 100)).toFixed(0));%>
+              <p> <% let finalPrice = toThousand((product.product_price - (product.product_price * product.discount / 100)).toFixed(0));%>
                 <% if (product.discount > 0) { 	%>
                     <!-- Si el producto tiene descuento, muestra lo de abajo-->
                     <p class="content">
-                        <b><%= toThousand(product.price) %></b>
+                        <b><%= toThousand(product.product_price) %></b>
                         /
                         <b><%= product.discount %>% OFF</b>
                     </p>

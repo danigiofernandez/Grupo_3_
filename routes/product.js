@@ -9,17 +9,18 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, '../public/images')
+        cb(null, path.join(__dirname,'../public/images'))
     },
     filename: function(req,file,cb){
-        cb(null,`${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`)
+        const newFilename = 'nuevo' + Date.now() + path.extname(file.originalname);
+        cb(null, newFilename)
         
         /* fieldname	Nombre de campo especificado en el formulario	
          originalname	Nombre del archivo en la computadora del usuario */
     }
 })
 
-var upload = multer({ storage: storage });
+const upload = multer({ storage });
 // Creacion:
 router.get('/crear', productControllers.crear);
 router.post('/crear', upload.single('image'), validations, productControllers.guardar);

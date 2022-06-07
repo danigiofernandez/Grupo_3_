@@ -2,7 +2,7 @@ const { json } = require("express");
 const {validationResult} = require("express-validator");
 const fs = require ('fs');
 const path = require ('path')
-//const db = require('../database/models');
+const db = require('../database/models');
 //const sequelize = db.sequelize;
 //const { Op } = require('sequelize');
 //const moment = require('moment');
@@ -63,8 +63,12 @@ const mainControllers = {
 
   cart:(req, res)=>{
     //const element = document.getElementById('#cantidad').value
-    const product = products.find(product=>product.id==req.params.id) // busqueda de productos por id
-    res.render('cart',{product,toThousand})
+    //const product = products.find(product=>product.id==req.params.id) // busqueda de productos por id
+    //res.render('cart',{product,toThousand})
+    db.Product.findByPk(req.params.id)
+            .then(function (product) {
+                res.render('cart', {product:product, toThousand});
+            })
   },
 
   login: (req, res)=>{
