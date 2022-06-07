@@ -57,27 +57,27 @@ const productController = {
     },
 
     guardar: function (req, res) {
+        
+         
         let image;
 
         if(req.file != undefined){
             image = req.file.filename;
         }else{
-            image = 'default-image.png';
+            image = 'default-image.jpg';
         }
-
-        /*let sumaid = db.Product.findOne({
-            where: { 
-                product_id: Math.max(db.product_id)}
-        }).then(a => {a + 1})*/
-
         db.Product.create({
             product_name: req.body.product_name,
             product_price: req.body.product_price,
             product_brand: req.body.brand,
             discount: req.body.discount,
             description: req.body.description,
-            image: req.body.image,
+            image: image,
            /* product_id: sumaid,*/
+             /*let sumaid = db.Product.findOne({
+            where: { 
+                product_id: Math.max(db.product_id)}
+        }).then(a => {a + 1})*/
            //
         })
         res.redirect('/')
@@ -144,7 +144,7 @@ const productController = {
 
     borrar: function (req, res) {
          db.Product.destroy({where: {product_id: req.params.id}})
-         res.redirect('/nuevoindex')
+         res.redirect('/')
     },
     destroy: async function (req, res) {
        
